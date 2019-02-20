@@ -1,0 +1,6 @@
+PWD c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW
+INPUT c:/texlive/2018/texmf.cnf
+INPUT c:/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/template.tex
+OUTPUT c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/template.log
