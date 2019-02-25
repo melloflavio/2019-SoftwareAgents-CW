@@ -1,10 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1550627040 "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex" "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf" "report" 1550700386
+["pdflatex"] 1551122901 "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex" "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf" "report" 1551122902
   "Images/1_Playing_Field.jpg" 1550625222 77636 9a17b87123d6379803a60bb4c9dc0646 ""
   "Images/2_Playing_Field_Indexed.jpg" 1550625232 83085 14fb20ab87906c8b352e3cfbaa4ba1f0 ""
   "Images/3_Playing_Field_Encoding.jpg" 1550626633 42200 9feb04ab97191d4a98d6a71a77bc3c56 ""
-  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux" 1550627040 2139 ab049fb15a6c17f5208bd6291efea616 ""
-  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex" 1550627038 10383 33fd73117fb2d718351daad6123dd994 ""
+  "Images/4_TransitionGraph.jpg" 1551118276 13557 bf7034f29b080eb56d28ff88a6152d0b ""
+  "Images/5_R_Matrix.png" 1551122197 10031 5f22e93f9088ac9b4122734d21e3c4b4 ""
+  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux" 1551122902 2521 5331857f6b9f0f29537db4facba6f2dd ""
+  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex" 1551122900 12513 8a8de8e13c14395fc3512dd34200d3af ""
   "c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1550591478 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1550592045 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1550595400 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -89,11 +91,11 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1550596550 3265573 655ac40406f2c37c0d9078d533adef20 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1550596647 4223237 5ed595cb6f7cbf4e89e6f1506a93491a ""
   "c:/texlive/2018/texmf.cnf" 1550596525 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "report.aux" 1550627040 2139 ab049fb15a6c17f5208bd6291efea616 ""
-  "report.tex" 1550627038 10383 33fd73117fb2d718351daad6123dd994 ""
+  "report.aux" 1551122902 2521 5331857f6b9f0f29537db4facba6f2dd ""
+  "report.tex" 1551122900 12513 8a8de8e13c14395fc3512dd34200d3af ""
   (generated)
-  "report.log"
   "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf"
-  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.log"
+  "report.log"
   "report.aux"
   "report.pdf"
+  "c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.log"

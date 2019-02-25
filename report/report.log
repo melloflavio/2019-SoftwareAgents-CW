@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  20 FEB 2019 01:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  25 FEB 2019 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,23 +826,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-<Images/1_Playing_Field.jpg, id=1, 1798.72pt x 1284.8pt>
-File: Images/1_Playing_Field.jpg Graphic file (type jpg)
-<use Images/1_Playing_Field.jpg>
-Package pdftex.def Info: Images/1_Playing_Field.jpg  used on input line 79.
+<./Images/1_Playing_Field.jpg, id=1, 1798.72pt x 1284.8pt>
+File: ./Images/1_Playing_Field.jpg Graphic file (type jpg)
+<use ./Images/1_Playing_Field.jpg>
+Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 79.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
  [1
 
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/1_Playing_Field.jpg>]
-<Images/2_Playing_Field_Indexed.jpg, id=9, 1798.72pt x 1284.8pt>
-File: Images/2_Playing_Field_Indexed.jpg Graphic file (type jpg)
-<use Images/2_Playing_Field_Indexed.jpg>
-Package pdftex.def Info: Images/2_Playing_Field_Indexed.jpg  used on input line 98.
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/1_Playing_Field.jpg>]
+<./Images/2_Playing_Field_Indexed.jpg, id=9, 1798.72pt x 1284.8pt>
+File: ./Images/2_Playing_Field_Indexed.jpg Graphic file (type jpg)
+<use ./Images/2_Playing_Field_Indexed.jpg>
+Package pdftex.def Info: ./Images/2_Playing_Field_Indexed.jpg  used on input line 98.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
-<Images/3_Playing_Field_Encoding.jpg, id=10, 903.375pt x 385.44pt>
-File: Images/3_Playing_Field_Encoding.jpg Graphic file (type jpg)
-<use Images/3_Playing_Field_Encoding.jpg>
-Package pdftex.def Info: Images/3_Playing_Field_Encoding.jpg  used on input line 102.
+<./Images/3_Playing_Field_Encoding.jpg, id=10, 903.375pt x 385.44pt>
+File: ./Images/3_Playing_Field_Encoding.jpg Graphic file (type jpg)
+<use ./Images/3_Playing_Field_Encoding.jpg>
+Package pdftex.def Info: ./Images/3_Playing_Field_Encoding.jpg  used on input line 102.
 (pdftex.def)             Requested size: 266.74144pt x 113.81102pt.
 
 
@@ -854,20 +854,32 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
-[2] [3 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/2_Playing_Field_Indexed.jpg> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/3_Playing_Field_Encoding.jpg>] [4] [5] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux) ) 
+[2] [3 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
+<./Images/4_TransitionGraph.jpg, id=20, 562.1pt x 366.36874pt>
+File: ./Images/4_TransitionGraph.jpg Graphic file (type jpg)
+<use ./Images/4_TransitionGraph.jpg>
+Package pdftex.def Info: ./Images/4_TransitionGraph.jpg  used on input line 127.
+(pdftex.def)             Requested size: 174.60942pt x 113.81102pt.
+ [4 <./Images/4_TransitionGraph.jpg>]
+<./Images/5_R_Matrix.png, id=26, 472.76625pt x 168.63pt>
+File: ./Images/5_R_Matrix.png Graphic file (type png)
+<use ./Images/5_R_Matrix.png>
+Package pdftex.def Info: ./Images/5_R_Matrix.png  used on input line 146.
+(pdftex.def)             Requested size: 319.0818pt x 113.81102pt.
+ [5 <./Images/5_R_Matrix.png>] [6] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux) ) 
 Here is how much of TeX's memory you used:
- 6123 strings out of 492616
- 94610 string characters out of 6132768
- 182871 words of memory out of 5000000
- 9847 multiletter control sequences out of 15000+600000
- 37762 words of font info for 127 fonts, out of 8000000 for 9000
+ 6141 strings out of 492616
+ 95010 string characters out of 6132768
+ 182895 words of memory out of 5000000
+ 9858 multiletter control sequences out of 15000+600000
+ 38988 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,38p,1899b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (5 pages, 274217 bytes).
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (6 pages, 299583 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23568 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 23578 words of extra memory for PDF output out of 24883 (max. 10000000)
 
