@@ -165,12 +165,12 @@
         \begin{itemize}
             \item Initial $\epsilon$: \texttt{0.999}
             \item Decay threshold (\texttt{r}): \texttt{0.5}
-            \item Decay Rate 1 ($\epsilon$ $\geqslant$ \texttt{r}): \texttt{0.999}
-            \item Decay Rate 2 ($\epsilon$ $<$ \texttt{r} ): \texttt{0.99}
+            \item Decay Rate 1 ($\epsilon$ $\geqslant$ \texttt{r}): \texttt{0.9995}
+            \item Decay Rate 2 ($\epsilon$ $<$ \texttt{r} ): \texttt{0.995}
         \end{itemize}
 
     \subsection{Experiment duration - (\texttt{num\_episodes} and \texttt{max\_steps})}
-        \sloppy This study defines two stopping criteria regarding the learning experiments: \texttt{num\_episodes} and \texttt{max\_steps}. The former determines how many learning episodes are ran in total before analyzing the results. While the latter establishes a maximum amount of steps taken in a single learning episode before declaring the agents as "stuck" and terminating the episode. If the terminal state is reached before \texttt{max\_steps} are taken, the episode is also terminated. One detail that is important to stress is that, in this experiment, in a multi-agent scenario the terminal state is only considered as reached when every single agent has performed an action that results in reaching that state, thus collecting its reward. For the initial experiment, the following values were used: \texttt{num\_episodes}=10000 and \texttt{max\_steps}=30.
+        \sloppy This study defines two stopping criteria regarding the learning experiments: \texttt{num\_episodes} and \texttt{max\_steps}. The former determines how many learning episodes are ran in total before analyzing the results. While the latter establishes a maximum amount of steps taken in a single learning episode before declaring the agents as "stuck" and terminating the episode. If the terminal state is reached before \texttt{max\_steps} are taken, the episode is also terminated. One detail that is important to stress is that, in this experiment, in a multi-agent scenario the terminal state is only considered as reached when every single agent has performed an action that results in reaching that state, thus collecting its reward. For the initial experiment, the following values were used: \texttt{num\_episodes}=5000 and \texttt{max\_steps}=30.
 
     \subsection{Reward/Penalty}
         In this study, the reward and penalty values are defined arbitrarily, given the abstract nature of the experiment. As noted in section \ref{sec:r_matrix}, the initial values for reward and penalty are 100 and -100, respectively.
