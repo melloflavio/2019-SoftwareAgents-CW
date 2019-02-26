@@ -149,7 +149,22 @@
     \end{figure}
 
 \section{Q-Learning Parameters}
+The Q-Learning algorithm provides a some hyperparameters that may be tuned according to the task at hand and the limitations and opportunities associated with it. The two most prominent would be $\gamma$ and $\alpha$. This study presents additional parameters directly or indirectly related to Q-Learning (e.g. number of episodes, max steps per episode, $\epsilon$ decay rules), as well as parameters associated with the task itself (e.g. Number of agents, return for reaching terminal state).
 
+\subsection{Discount Factor - $\gamma$}
+The discount factor ($\gamma$) main function is to weigh the probability of receiving expected future rewards. It is used as a multiplier to the maximum expected return of the next step, when updating the Q-Matrix. In a sense, it represents the certainty associated with eventually receiving future rewards. It's value may range from 0 to 1: 0 being no certainty at all, thus ignoring any expected return beyond the immediate step being taken. And 1 representing absolute certainty that future returns will match the expectation. For the initial experiment, $\gamma$ was set to \texttt{0.5}.
+
+\subsection{Learning Rate - $\alpha$}
+The learning rate parameter is used to control the rate at which the Q-Matrix is updated after a learning observation. As an analogy, it could be associated to the Q-Matrix's inertia. As with $\gamma$, $\alpha$'s values are between 0 and 1. As per the analogy, 0 would represent a scenario in which the Q-Matrix has infinite inertia, thus the Q-Matrix values remain the same, regardless of the feedback received from the observation. Oppositely, an $\alpha$ of 1 would represent a Q-Matrix with no inertia at all with it's values being completely replaced by the observations gathered at every step. For the initial experiment, $\alpha$ was set to \texttt{0.5}
+
+\subsection{Epsilon - $\epsilon$}
+
+
+\subsection{Experiment duration - (\texttt{num\_episodes} and \texttt{max\_steps})}
+
+\subsection{Number of Agents - (\texttt{num\_agents}))}
+
+\subsection{Reward/Penalty}
 
 \section{Q-Matrix Update Cycle}
 \section{Initial Results}
