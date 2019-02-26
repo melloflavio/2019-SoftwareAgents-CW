@@ -8,8 +8,10 @@
 % \documentclass{ieeetran}
 
 \usepackage{mathtools}
+\usepackage{amssymb}
 \usepackage{textgreek}
 \usepackage{graphics}
+\usepackage[margin=1in]{geometry}
 
 % \ifpdf%                                % if we use pdflatex
 %   \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
@@ -117,10 +119,10 @@
 
     The reward function grants agents 100 points for any action that transition them to the desired state, this includes the non-movement action of staying in the same place. Contrarily, agents are awarded negative 100 points for transitions that take them away from the desired state.
 
-\section{Learning Policy}
+\section{Learning Policy} \label{sec:learning_policy}
     The learning policy selected for this study is the $\epsilon$-greedy policy. This policy relies on a dynamic value $\epsilon$, such that $0<\epsilon<1$, to determine an agent's strategy in a given state/time. The agent is to explore (i.e. take a random action) with $\epsilon$ probability, and exploit (i.e. take the action which has the highest expected return as per the Q-matrix) with (1-$\epsilon$) probability. The learning process starts with a predetermined $\epsilon$ value, which is gradually decreased after each learning episode. This means that when there is more uncertainty (i.e. at the beginning of the learning process, when not much is known regarding the environment), the agent is more prone to take random actions, exploring the possible state space and gathering feedback and "understanding" of the surrounding environment. Gradually, the more the agent knows regarding the environment, less often it takes random actions. This effectively has the result of directing the random exploration to regions surrounding the currently learned action policy. The selection of initial value and decay function for $\epsilon$ plays an important role in the performance of the learning process. If the decay is too slow, or the initial value is too high, the agent will keep exploring for longer possibly over exploring the problem space before converging to a policy, leading to longer training times. Conversely, if the decay is too fast (or the initial value is too low), the agent will converge to a policy faster, but this policy may be suboptimal as the problem space was underexplored. Naturally the optimal decay rate is dependent on the particular task being learned and the size of the state space. Striking this optimal balance is, therefore, an important step in the tuning process.
 
-\section{Graphical Representation \& R Matrix}
+\section{Graphical Representation \& R Matrix} \label{sec:r_matrix}
 
     \begin{figure}[ht]
         \centering
@@ -158,15 +160,26 @@ The discount factor ($\gamma$) main function is to weigh the probability of rece
 The learning rate parameter is used to control the rate at which the Q-Matrix is updated after a learning observation. As an analogy, it could be associated to the Q-Matrix's inertia. As with $\gamma$, $\alpha$'s values are between 0 and 1. As per the analogy, 0 would represent a scenario in which the Q-Matrix has infinite inertia, thus the Q-Matrix values remain the same, regardless of the feedback received from the observation. Oppositely, an $\alpha$ of 1 would represent a Q-Matrix with no inertia at all with it's values being completely replaced by the observations gathered at every step. For the initial experiment, $\alpha$ was set to \texttt{0.5}
 
 \subsection{Epsilon - $\epsilon$}
-
+The $\epsilon$ parameter refers to the $\epsilon$-greedy algorithm, which is used to select the actions taken by agents in the learning process. The results of such actions are then fed to the Q-Learning algorithm in the Q-Matrix update cycle. As stated in section \ref{sec:learning_policy} this experiment opted to rely on a commonly used pattern of multi-band $\epsilon$ decay. For the initial experiment the following values were used:
+\begin{itemize}
+    \item Initial $\epsilon$: 0.999
+    \item Decay threshold (\texttt{r}): 0.5
+    \item Decay Rate 1 ($\epsilon$ $\geqslant$ \texttt{r}): 0.999
+    \item Decay Rate 2 ($\epsilon$ $<$ \texttt{r} ): 0.99
+\end{itemize}
 
 \subsection{Experiment duration - (\texttt{num\_episodes} and \texttt{max\_steps})}
-
-\subsection{Number of Agents - (\texttt{num\_agents}))}
+\sloppy This study defines two stopping criteria regarding the learning experiments: \texttt{num\_episodes} and \texttt{max\_steps}. The former determines how many learning episodes are ran in total before analyzing the results. While the latter establishes a maximum amount of steps taken in a single learning episode before declaring the agents as "stuck" and terminating the episode. If the terminal state is reached before \texttt{max\_steps} are taken, the episode is also terminated. For the initial experiment, the following values were used: \texttt{num\_episodes}=10000 and \texttt{max\_steps}=30.
 
 \subsection{Reward/Penalty}
+In this study, the reward and penalty values are defined arbitrarily, given the abstract nature of the experiment. As noted in section \ref{sec:r_matrix}, the initial values for reward and penalty are 100 and -100, respectively.
+
+\subsection{Number of Agents - (\texttt{num\_agents})}
+For implementation purposes, the number of agents in a experiment is also configurable. The initial experiments take place with both 1 and 2 agents settings.
 
 \section{Q-Matrix Update Cycle}
+
+
 \section{Initial Results}
 \section{Further Tests}
 \section{Quantitative Analysis}
