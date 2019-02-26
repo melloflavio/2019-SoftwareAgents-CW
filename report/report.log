@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  26 FEB 2019 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  26 FEB 2019 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -494,6 +494,45 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
  (c:/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)) (c:/texlive/2018/texmf-dist/tex/latex/pythonhighlight/pythonhighlight.sty
+Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivier Verdier <olivier.verdier@gmail.com>
+ (c:/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count104
+\lst@gtempboxa=\box29
+\lst@token=\toks20
+\lst@length=\count105
+\lst@currlwidth=\dimen121
+\lst@column=\count106
+\lst@pos=\count107
+\lst@lostspace=\dimen122
+\lst@width=\dimen123
+\lst@newlines=\count108
+\lst@lineno=\count109
+\lst@maxwidth=\dimen124
+ (c:/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count110
+\lst@skipnumbers=\count111
+\lst@framebox=\box30
+) (c:/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+ (c:/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )) (c:/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
  (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -504,26 +543,26 @@ Package ifvtex Info: VTeX not detected.
 ) (c:/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count104
-\Gm@cntv=\count105
-\c@Gm@tempcnt=\count106
-\Gm@bindingoffset=\dimen121
-\Gm@wd@mp=\dimen122
-\Gm@odd@mp=\dimen123
-\Gm@even@mp=\dimen124
-\Gm@layoutwidth=\dimen125
-\Gm@layoutheight=\dimen126
-\Gm@layouthoffset=\dimen127
-\Gm@layoutvoffset=\dimen128
-\Gm@dimlist=\toks20
+\Gm@cnth=\count112
+\Gm@cntv=\count113
+\c@Gm@tempcnt=\count114
+\Gm@bindingoffset=\dimen125
+\Gm@wd@mp=\dimen126
+\Gm@odd@mp=\dimen127
+\Gm@even@mp=\dimen128
+\Gm@layoutwidth=\dimen129
+\Gm@layoutheight=\dimen130
+\Gm@layouthoffset=\dimen131
+\Gm@layoutvoffset=\dimen132
+\Gm@dimlist=\toks21
 ) (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
-\MT@toks=\toks21
-\MT@count=\count107
+\MT@toks=\toks22
+\MT@count=\count115
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen129
+\MT@outer@kern=\dimen133
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count108
+\MT@listname@count=\count116
  (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 913.
@@ -730,50 +769,50 @@ Package: cite 2015/02/27  v 5.5
 ) (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 70.
  (c:/texlive/2018/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 70.
  (c:/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 69.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 70.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen130
-\Gin@req@width=\dimen131
+\Gin@req@height=\dimen134
+\Gin@req@width=\dimen135
 ) (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen132
-\scratchbox=\box29
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen133
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count117
+\scratchdimen=\dimen136
+\scratchbox=\box31
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen137
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks24
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -812,6 +851,8 @@ Package grfext Info: Graphics extension search list:
  (c:/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+\c@lstlisting=\count123
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -846,7 +887,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 69.
+LaTeX Info: Redefining \microtypecontext on input line 70.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -859,7 +900,7 @@ Package microtype Info: No adjustment of character kerning.
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 71.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 72.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -867,15 +908,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 71.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 72.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 72.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 71.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 72.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 ) (c:/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -884,17 +925,17 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 <./Images/1_Playing_Field.jpg, id=1, 1798.72pt x 1284.8pt>
 File: ./Images/1_Playing_Field.jpg Graphic file (type jpg)
 <use ./Images/1_Playing_Field.jpg>
-Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 81.
+Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 82.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
  [1
 
@@ -902,32 +943,32 @@ Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 81.
 <./Images/2_Playing_Field_Indexed.jpg, id=9, 1798.72pt x 1284.8pt>
 File: ./Images/2_Playing_Field_Indexed.jpg Graphic file (type jpg)
 <use ./Images/2_Playing_Field_Indexed.jpg>
-Package pdftex.def Info: ./Images/2_Playing_Field_Indexed.jpg  used on input line 100.
+Package pdftex.def Info: ./Images/2_Playing_Field_Indexed.jpg  used on input line 101.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
 <./Images/3_Playing_Field_Encoding.jpg, id=10, 903.375pt x 385.44pt>
 File: ./Images/3_Playing_Field_Encoding.jpg Graphic file (type jpg)
 <use ./Images/3_Playing_Field_Encoding.jpg>
-Package pdftex.def Info: ./Images/3_Playing_Field_Encoding.jpg  used on input line 104.
+Package pdftex.def Info: ./Images/3_Playing_Field_Encoding.jpg  used on input line 105.
 (pdftex.def)             Requested size: 266.74144pt x 113.81102pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
  [2 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
 <./Images/4_TransitionGraph.jpg, id=17, 562.1pt x 366.36874pt>
 File: ./Images/4_TransitionGraph.jpg Graphic file (type jpg)
 <use ./Images/4_TransitionGraph.jpg>
-Package pdftex.def Info: ./Images/4_TransitionGraph.jpg  used on input line 129.
+Package pdftex.def Info: ./Images/4_TransitionGraph.jpg  used on input line 130.
 (pdftex.def)             Requested size: 174.60942pt x 113.81102pt.
  [3 <./Images/4_TransitionGraph.jpg>]
 <./Images/5_R_Matrix.png, id=23, 472.76625pt x 168.63pt>
 File: ./Images/5_R_Matrix.png Graphic file (type png)
 <use ./Images/5_R_Matrix.png>
-Package pdftex.def Info: ./Images/5_R_Matrix.png  used on input line 148.
+Package pdftex.def Info: ./Images/5_R_Matrix.png  used on input line 149.
 (pdftex.def)             Requested size: 319.0818pt x 113.81102pt.
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 157.
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 158.
  (c:/texlive/2018/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
@@ -936,26 +977,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [4 <./Images/5_R_Matrix.png>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 165.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 166.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 171.
- [5] [6] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux) ) 
+(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 172.
+ [5] (c:/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 192.
+ [6] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux) ) 
 Here is how much of TeX's memory you used:
- 7005 strings out of 492616
- 106704 string characters out of 6132768
- 197342 words of memory out of 5000000
- 10672 multiletter control sequences out of 15000+600000
- 44533 words of font info for 154 fonts, out of 8000000 for 9000
+ 9507 strings out of 492616
+ 138227 string characters out of 6132768
+ 486693 words of memory out of 5000000
+ 13135 multiletter control sequences out of 15000+600000
+ 47917 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,38p,1899b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (6 pages, 317378 bytes).
+ 41i,6n,48p,1899b,1624s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (6 pages, 331952 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 25114 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 26650 words of extra memory for PDF output out of 29859 (max. 10000000)
 
