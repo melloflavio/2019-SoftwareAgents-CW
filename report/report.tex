@@ -103,7 +103,7 @@
         \label{fig:field_indexed}
 
         \includegraphics[height=4cm]{./Images/3_Playing_Field_Encoding.jpg}
-        \caption{State string with equivalent field representation}
+        \caption{State string with equivalent playing field representation}
         \label{fig:field_mapping}
     \end{figure}
 
@@ -194,8 +194,8 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     alpha = EXPERIMENT['alpha']
     gamma = EXPERIMENT['gamma']
 
-
-    current_q = Q[current_agent_id] # Get current agent's Q-matrix
+    # Get current agent's Q-matrix
+    current_q = Q[current_agent_id]
 
     # Q(s,a)old
     old_expected_return = current_q.loc[current_state, next_state]
@@ -206,6 +206,8 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
 
     # Q(s,a)new
     new_expected_return = old_expected_return + alpha * (earned_reward + gamma * best_expected_return - old_expected_return)
+
+    # Update value in current agent's Q-matrix
     current_q.loc[current_state, next_state] = new_expected_return
     \end{python}
 
