@@ -169,7 +169,7 @@
             \item Decay Rate 2 ($\epsilon$ $<$ \texttt{r} ): \texttt{0.995}
         \end{itemize}
 
-    \subsection{Experiment duration - (\texttt{num\_episodes} and \texttt{max\_steps})}
+    \subsection{Experiment duration - (\texttt{num\_episodes} and \texttt{max\_steps})}\label{sec:params:duration}
         \sloppy This study defines two stopping criteria regarding the learning experiments: \texttt{num\_episodes} and \texttt{max\_steps}. The former determines how many learning episodes are ran in total before analyzing the results. While the latter establishes a maximum amount of steps taken in a single learning episode before declaring the agents as "stuck" and terminating the episode. If the terminal state is reached before \texttt{max\_steps} are taken, the episode is also terminated. One detail that is important to stress is that, in this experiment, in a multi-agent scenario the terminal state is only considered as reached when every single agent has performed an action that results in reaching that state, thus collecting its reward. For the initial experiment, the following values were used: \texttt{num\_episodes}=5000 and \texttt{max\_steps}=30.
 
     \subsection{Reward/Penalty}
@@ -187,6 +187,7 @@
 
     Implementation-wise the code, in Python, used for updating the Q-Matrix is the following:
 
+\onecolumn
 % Keep identation to left since \begin{python} respects current identation
     \begin{python}
 def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
@@ -211,14 +212,65 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     current_q.loc[current_state, next_state] = new_expected_return
     \end{python}
 
-
 \section{Initial Results}
+\subsection{Single agent}
+Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figures \ref{fig:exp1:win_percent}, \ref{fig:exp1:steps} and \ref{fig:exp1:updates} show, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out with a moving window. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_1/1_win_percent.png}
+    \caption{Percentage of episodes able to reach terminal state in single agent experiment}
+    \label{fig:exp1:win_percent}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_1/2_total_steps.png}
+    \caption{Steps taken per episode in single agent experiment}
+    \label{fig:exp1:steps}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_1/3_updates_per_step.png}
+    \caption{Number of updates to Q Matrix per step taken in single agent experiment}
+    \label{fig:exp1:updates}
+\end{figure}
+
+\subsection{Two agents}
+The initial results for experiments with two independent agents show that they fail to learn the correct path to terminal state. Figures \ref{fig:exp2:win_percent} and \ref{fig:exp2:steps} indicate how the agents are not able to reach the terminal state on a consistent basis, even after epsilon is near 0, meaning the agents are expected to always chose the action with the highest expected reward (i.e. the one that leads them faster to the terminal state). While figure \ref{fig:exp2:updates}, indicates that  there is little activity in agent 1's Q-Matrix, which appears to converge well before the shift to exploitation and also sooner than the experiment with a single agent. The figure also indicates continuous (an erratic) activity in agent 2's Q-Matrix, well after the shift to exploitation.
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_2/1_win_percent.png}
+    \caption{Percentage of episodes able to reach terminal state in two-agent experiment}
+    \label{fig:exp2:win_percent}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_2/2_total_steps.png}
+    \caption{Steps taken per episode in two-agent experiment}
+    \label{fig:exp2:steps}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[height=4cm]{Images/exp_2/3_updates_per_step.png}
+    \caption{Number of updates to Q Matrix per step taken in two-agent experiment}
+    \label{fig:exp2:updates}
+\end{figure}
+
 \section{Further Tests}
+\subsection{Experiment duration}
+As specified in section \ref{sec:params:duration}, the experiment duration dictates how many episodes are ran per experiment. Considering that the scenario is deterministic, static, and the state-space is finite and small (i.e.: feasibly exhaustible), the experiments are expected to converge after a certain number of learning episodes and remain stable after that. Following that logic, in order to study the behaviour of agent's learning, it suffices to constrain the number of episodes to be enough to show the learning stage and a sample of the post converged regime. In order to speed up the simulations while still being able to represent the whole phenomenon, the number of episodes used is lowered to 2500. In some specific cases this number may not be enough to show the complete picture, such instances are dealt on an ad-hoc basis by increasing the number of episodes, as needed, for that particular experiment.
+
+\subsection{$\alpha$ values}
+
+
+\subsection{$\gamma$ values}
+
+\subsection{Episode duration}
+\subsection{$\epsilon$ decay}
+
+
 \section{Quantitative Analysis}
 \section{Qualitative Analysis}
-\section{Error Correction Models}
+\section{Advanced Reinforcement Learning Techniques}
+\section{Q-learning and Psychological Error Correction Models}
 \section{Error Correction Implementation Proposal}
 
 
+
+\appendix
+\section{Q-Matrix update code}
 
 \end{document}
