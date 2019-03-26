@@ -13,6 +13,7 @@
 \usepackage{graphics} % Images
 \usepackage{pythonhighlight} % Syntax Highlighted code
 \usepackage[margin=1in]{geometry} % Change Margins
+\usepackage[shortlabels]{enumitem} % Enum with letters
 
 % \ifpdf%                                % if we use pdflatex
 %   \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
@@ -249,7 +250,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
             \label{fig:exp2:updates}
         \end{figure}
 
-\section{Further Tests}
+\section{Further Tests}\label{sec:further_tests}
     In order to visualize the influence each parameter has on the learning process, further experiments were ran by varying each parameter individually. Unless otherwise specified, the remaining parameters were kept at the values indicated in section \ref{sec:params}
 
     \subsection{Experiment duration}
@@ -300,21 +301,58 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         \end{figure}
 
     \subsection{$\epsilon$ decay}
-        Regarding the $\epsilon$ decay, 3 different tests were done:
-        \begin{enumerate}
-            \item Vary the initial $\epsilon$ value
-            \item Vary the threshold at which the decay changes
-            \item Vary the $\epsilon$-decay rates
+        Regarding the $\epsilon$ decay, 2 different tests were done: a) Vary the threshold at which the decay changes; and b) Vary the $\epsilon$-decay rates.
+
+        \begin{figure}[h]
+            \includegraphics[height=4cm]{Images/exp_6/1_change.png}
+            \caption{Win \% progression with varying $\epsilon$ decay change threshold  - Single agent}
+            \label{fig:exp6:change}
+        \end{figure}
+
+        \begin{figure}[h]
+            \includegraphics[height=4cm]{Images/exp_6/2_threshold.png}
+            \caption{Win \% progression with varying $\epsilon$ decay rate - Single agent}
+            \label{fig:exp5:threshold}
+        \end{figure}
+
+
+\section{Quantitative Analysis}\label{sec:quant_analysis}
+    From the experiments results shown in section \ref{sec:further_tests}, the first conclusion that can be drawn is that, regardless of the changes in hyperparameters presented, the Q-Learning algorithm, as implemented, is unable to converge to a solution when dealing with 2 independent agents. The rolling win \% remains noisy and shows no sign of move towards an increase in the win ratio in all cases observed. Conversely, in the single agent scenario, the algorithm converges to optimal solution in all cases.
+
+    Changing either $\gamma$ or $\alpha$ produced no change whatsoever in the convergence to the optimal solution, not even in the speed at which the agent converges. They did however produce changes in the duration of update activity in the Q table. Such duration was inversely proportional to $\alpha$, and directly proportional to $\gamma$.
+    Regarding individual episodes' duration, increasing the maximum duration had the effect of proportionally increasing the win \%
+    Finally, observing the effects of variations in the $\epsilon$ parameters, it can be said that, for this particular setting, lowering the both decay rates had the effect of reducing the amount of episode needed to reach 100\% win rate.
+
+\section{Qualitative Analysis - Single Agent}
+    Further examining the results discussed in section \ref{sec:quant_analysis} and crossing them with knowledge of how the Q-Learning algorithm works, it is possible to reach explanations as to why such behaviours manifest themselves.
+
+    \subsection{Maximum Episode duration - \texttt{max\_steps}}
+        Differently from the experiment duration, which only varies the observed window of the learning process, the maximum episode duration may affect the learning process to the extent that longer episodes increase the chance of randomly reaching the terminal state as well as increase the probability of propagating the return expectation throughout the Q-Matrix as more actions are taken per episode. So, if we are to measure the win \% in terms of episodes, the average win \% is expected to be directly correlated to the maximum number of steps allowed per episode.
+
+    \subsection{$\alpha$ and $\gamma$}\label{sec:quali:gamma}
+        Initially, it may seem strange that two of the most prominent hyperparameters in Q-Learning have little effect in the rate at with the algorithm converges in terms of win \%. This behaviour, however, can be fully explained by the inner workings of the Q-Learning algorithm coupled with the topology of the playing field. Such invariance to changes in $\alpha$ and $\gamma$ can be explained by four factors:
+        \begin{enumerate}[a)]
+            \item the field is a narrow corridor with no loops
+            \item there is a single positive reward source/state and no punishment(negative reward) is ever given
+            \item the learning starts with a Q-Table with all actions expecting 0 reward
+            \item the setting is completely deterministic
+            \item Q-Matrix is updated after each action
         \end{enumerate}
+        The playing field topology is such that, for any 2 locations, there is only a single path that joins them without backtracking. In essence, this means that, for each given location, there is only a single path to be learned to reach the terminal state. Being the playing field deterministic, and the Q-Matrix updated after each step means that the values in the Q-Matrix will monotonically increase until reaching their post convergence values. Based on this, the expected reward is propagated backwards from the terminal state to each location through multiple learning episodes in a way that actions leading to states closer to the terminal are guaranteed to always have higher rewards than ones leading away at any given moment in the learning process. Changes in $\alpha$ and $\gamma$ have the effect of changing the absolute values for actions within the Q-Matrix, but not their relative values towards other actions and, consequently, the decisions taken by a greedy agent.
+
+
+    \subsection{Decay Rate - $\epsilon$}
+        This scenario favors lower decay rates, this makes sense given the simplicity of the task to be learned.
+        The $\epsilon$-greedy policy has the effect of slowly increasing the greediness of the agent so that the randomness is constrained to state/action pairs neighbouring the then learned policy. This is necessary in situations with a large state/action space such that exhausting it is not feasible with available computing power.
+        Given the behaviour described in section \ref{sec:quali:gamma}, it is known that it is not necessary to wait for the Q-Matrix to fully converge (i.e. reach an equilibrium), as a small change in the Q-Matrix is suffices to lead a greedy agent towards the terminal state. The size of the board, and therefore the state-action pair space, is such that it can be exhausted by brute force with a somewhat low processing power available. Thus, having the agent taking random actions is enough to converge the Q-Matrix in considerably fast fashion.
 
 
 
-\section{Quantitative Analysis}
-\section{Qualitative Analysis}
-\subsection{Maximum Episode duration - \texttt{max\_steps}}
-Differently from the experiment duration, which only varies the observed window of the learning process, the maximum episode duration may affect the learning process to the extent that longer episodes increase the chance of randomly reaching the terminal state as well as increase the probability of propagating the return expectation throughout the Q-Matrix as more actions are taken per episode. So, if we are to measure the win \% in terms of episodes, the average win \% is expected to be directly correlated to the maximum number of steps allowed per episode.
 
-\subsection{Decay Rate - $\epsilon$}
+    analogy
+
+
+\section{Qualitative Analysis - Two Agents}
 \section{Advanced Reinforcement Learning Techniques}
 \section{Q-learning and Psychological Error Correction Models}
 \section{Error Correction Implementation Proposal}
