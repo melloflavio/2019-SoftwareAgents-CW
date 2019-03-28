@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  26 MAR 2019 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  28 MAR 2019 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,15 +869,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(43.36243pt, 527.57014pt, 43.36243pt)
+* v-part:(T,H,B)=(43.36243pt, 708.24513pt, 43.36243pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=527.57014pt
+* \textheight=708.24513pt
+* \oddsidemargin=-28.90756pt
+* \evensidemargin=-28.90756pt
+* \topmargin=-65.90756pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -945,18 +945,18 @@ File: ./Images/1_Playing_Field.jpg Graphic file (type jpg)
 <use ./Images/1_Playing_Field.jpg>
 Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 83.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
- [1
-
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/1_Playing_Field.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
 
 
-LaTeX Warning: Reference `fig:field_indexed' on page 2 undefined on input line 97.
+LaTeX Warning: Reference `fig:field_indexed' on page 1 undefined on input line 97.
 
 
-LaTeX Warning: Reference `fig:field_mapping' on page 2 undefined on input line 97.
+LaTeX Warning: Reference `fig:field_mapping' on page 1 undefined on input line 97.
 
+[1
+
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/1_Playing_Field.jpg>]
 <./Images/2_Playing_Field_Indexed.jpg, id=9, 1798.72pt x 1284.8pt>
 File: ./Images/2_Playing_Field_Indexed.jpg Graphic file (type jpg)
 <use ./Images/2_Playing_Field_Indexed.jpg>
@@ -971,7 +971,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
-[2 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
+ [2 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
 <./Images/4_TransitionGraph.jpg, id=17, 562.1pt x 366.36874pt>
 File: ./Images/4_TransitionGraph.jpg Graphic file (type jpg)
 <use ./Images/4_TransitionGraph.jpg>
@@ -981,29 +981,32 @@ Package pdftex.def Info: ./Images/4_TransitionGraph.jpg  used on input line 131.
 
 LaTeX Warning: Reference `fig:transition_graph' on page 3 undefined on input line 136.
 
-[3 <./Images/4_TransitionGraph.jpg>]
 
-LaTeX Warning: Reference `sec:transition' on page 4 undefined on input line 138.
+LaTeX Warning: Reference `sec:transition' on page 3 undefined on input line 138.
 
 
-LaTeX Warning: Reference `fig:r_matrix' on page 4 undefined on input line 146.
+LaTeX Warning: Reference `fig:r_matrix' on page 3 undefined on input line 146.
 
-<./Images/5_R_Matrix.png, id=23, 472.76625pt x 168.63pt>
+<./Images/5_R_Matrix.png, id=18, 472.76625pt x 168.63pt>
 File: ./Images/5_R_Matrix.png Graphic file (type png)
 <use ./Images/5_R_Matrix.png>
 Package pdftex.def Info: ./Images/5_R_Matrix.png  used on input line 150.
 (pdftex.def)             Requested size: 319.0818pt x 113.81102pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./Images/4_TransitionGraph.jpg>]
 LaTeX Font Info:    Try loading font information for OT1+txtt on input line 159.
-(c:/texlive/2018/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+ (c:/texlive/2018/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `txtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [4 <./Images/5_R_Matrix.png>]
 
-LaTeX Warning: Reference `sec:learning_policy' on page 5 undefined on input line 165.
+
+LaTeX Warning: Reference `sec:learning_policy' on page 4 undefined on input line 165.
 
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 167.
 (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -1011,45 +1014,45 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/txtt/b/n' tried instead on input line 173.
-
+ [4 <./Images/5_R_Matrix.png>]
 
 LaTeX Warning: Reference `sec:r_matrix' on page 5 undefined on input line 177.
 
-[5] [6] (c:/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+[5] (c:/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/txtt/b/n' tried instead on input line 194.
 
 
-LaTeX Warning: Reference `fig:exp1:win_percent' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:win_percent' on page 6 undefined on input line 218.
 
 
-LaTeX Warning: Reference `fig:exp1:steps' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:steps' on page 6 undefined on input line 218.
 
 
-LaTeX Warning: Reference `fig:exp1:updates' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:updates' on page 6 undefined on input line 218.
 
 
-LaTeX Warning: Reference `fig:exp1:win_percent' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:win_percent' on page 6 undefined on input line 218.
 
 
-LaTeX Warning: Reference `fig:exp1:steps' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:steps' on page 6 undefined on input line 218.
 
 
-LaTeX Warning: Reference `fig:exp1:updates' on page 7 undefined on input line 218.
+LaTeX Warning: Reference `fig:exp1:updates' on page 6 undefined on input line 218.
 
-<Images/exp_1/1_win_percent.png, id=38, 436.63126pt x 283.0575pt>
+<Images/exp_1/1_win_percent.png, id=35, 436.63126pt x 283.0575pt>
 File: Images/exp_1/1_win_percent.png Graphic file (type png)
 <use Images/exp_1/1_win_percent.png>
 Package pdftex.def Info: Images/exp_1/1_win_percent.png  used on input line 220.
 (pdftex.def)             Requested size: 175.5555pt x 113.81102pt.
-<Images/exp_1/2_total_steps.png, id=39, 426.59375pt x 283.0575pt>
+<Images/exp_1/2_total_steps.png, id=36, 426.59375pt x 283.0575pt>
 File: Images/exp_1/2_total_steps.png Graphic file (type png)
 <use Images/exp_1/2_total_steps.png>
 Package pdftex.def Info: Images/exp_1/2_total_steps.png  used on input line 225.
 (pdftex.def)             Requested size: 171.51973pt x 113.81102pt.
-<Images/exp_1/3_updates_per_step.png, id=40, 429.605pt x 283.0575pt>
+<Images/exp_1/3_updates_per_step.png, id=37, 429.605pt x 283.0575pt>
 File: Images/exp_1/3_updates_per_step.png Graphic file (type png)
 <use Images/exp_1/3_updates_per_step.png>
 Package pdftex.def Info: Images/exp_1/3_updates_per_step.png  used on input line 230.
@@ -1061,35 +1064,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:exp2:win_percent' on page 6 undefined on input line 236.
 
 
-LaTeX Warning: Reference `fig:exp2:win_percent' on page 7 undefined on input line 236.
+LaTeX Warning: Reference `fig:exp2:steps' on page 6 undefined on input line 236.
 
 
-LaTeX Warning: Reference `fig:exp2:steps' on page 7 undefined on input line 236.
+LaTeX Warning: Reference `fig:exp2:updates' on page 6 undefined on input line 236.
 
-
-LaTeX Warning: Reference `fig:exp2:updates' on page 7 undefined on input line 236.
-
-<Images/exp_2/1_win_percent.png, id=41, 436.63126pt x 283.0575pt>
+<Images/exp_2/1_win_percent.png, id=38, 436.63126pt x 283.0575pt>
 File: Images/exp_2/1_win_percent.png Graphic file (type png)
 <use Images/exp_2/1_win_percent.png>
 Package pdftex.def Info: Images/exp_2/1_win_percent.png  used on input line 238.
 (pdftex.def)             Requested size: 175.5555pt x 113.81102pt.
-<Images/exp_2/2_total_steps.png, id=42, 426.59375pt x 283.0575pt>
+<Images/exp_2/2_total_steps.png, id=39, 426.59375pt x 283.0575pt>
 File: Images/exp_2/2_total_steps.png Graphic file (type png)
 <use Images/exp_2/2_total_steps.png>
 Package pdftex.def Info: Images/exp_2/2_total_steps.png  used on input line 243.
 (pdftex.def)             Requested size: 171.51973pt x 113.81102pt.
-<Images/exp_2/3_updates_per_step.png, id=43, 436.63126pt x 283.0575pt>
+<Images/exp_2/3_updates_per_step.png, id=40, 436.63126pt x 283.0575pt>
 File: Images/exp_2/3_updates_per_step.png Graphic file (type png)
 <use Images/exp_2/3_updates_per_step.png>
 Package pdftex.def Info: Images/exp_2/3_updates_per_step.png  used on input line 248.
 (pdftex.def)             Requested size: 175.5555pt x 113.81102pt.
+[6
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/1_win_percent.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1099,12 +1099,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `sec:params' on page 7 undefined on input line 254.
 
-[7
 
-]
+LaTeX Warning: Reference `sec:params:duration' on page 7 undefined on input line 257.
 
-LaTeX Warning: Reference `sec:params:duration' on page 8 undefined on input line 257.
-
+[7 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/3_updates_per_step.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/1_win_percent.png>]
 
 LaTeX Warning: Reference `fig:exp3:win_percent' on page 8 undefined on input line 260.
 
@@ -1125,9 +1123,6 @@ l.262 ...ight=4cm]{Images/exp_3/1_win_percent.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: File `Images/exp_3/2_win_percent.png' not found on input line 268.
@@ -1168,10 +1163,7 @@ l.277 ...ight=4cm]{Images/exp_4/1_win_percent.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[8 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/2_total_steps.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[8 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/3_updates_per_step.png>]
 
 LaTeX Warning: File `Images/exp_4/2_win_percent.png' not found on input line 283.
 
@@ -1186,9 +1178,6 @@ l.283 ...ight=4cm]{Images/exp_4/2_win_percent.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Reference `fig:exp5:win_percent' on page 9 undefined on input line 289.
@@ -1271,15 +1260,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `sec:further_tests' on page 9 undefined on input line 320.
 
-[9 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/3_updates_per_step.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/1_win_percent.png>]
+[9]
 
 LaTeX Warning: Reference `sec:quant_analysis' on page 10 undefined on input line 327.
 
-[10 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/3_updates_per_step.png>]
+[10]
 
-LaTeX Warning: Reference `sec:quali:gamma' on page 11 undefined on input line 347.
+LaTeX Warning: Reference `sec:quali:gamma' on page 11 undefined on input line 346.
 
-[11] [12] [13] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
+[11]
+
+LaTeX Warning: Reference `sec:quant_analysis' on page 12 undefined on input line 350.
+
+[12] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1288,18 +1281,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9903 strings out of 492616
- 145203 string characters out of 6132768
- 502902 words of memory out of 5000000
+ 9909 strings out of 492616
+ 145257 string characters out of 6132768
+ 501960 words of memory out of 5000000
  13491 multiletter control sequences out of 15000+600000
- 48869 words of font info for 183 fonts, out of 8000000 for 9000
+ 49107 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,48p,1899b,1624s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (13 pages, 485678 bytes).
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 486935 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26680 words of extra memory for PDF output out of 29859 (max. 10000000)
 

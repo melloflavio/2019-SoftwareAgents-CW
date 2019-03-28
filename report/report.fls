@@ -171,6 +171,7 @@ INPUT c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/rep
 INPUT ./Images/1_Playing_Field.jpg
 OUTPUT c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf
 INPUT ./Images/1_Playing_Field.jpg
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -182,7 +183,6 @@ INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/./Images/2_Playing_Field_Indexed.jpg
 INPUT ./Images/2_Playing_Field_Indexed.jpg
 INPUT ./Images/2_Playing_Field_Indexed.jpg
@@ -240,14 +240,14 @@ INPUT ./Images/5_R_Matrix.png
 INPUT c:/texlive/2018/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 INPUT c:/texlive/2018/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txtt.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT c:/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txbtt.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT c:/texlive/2018/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm

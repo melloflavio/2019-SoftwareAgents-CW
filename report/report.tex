@@ -12,7 +12,7 @@
 \usepackage{textgreek} % Greek letters inline with text
 \usepackage{graphics} % Images
 \usepackage{pythonhighlight} % Syntax Highlighted code
-\usepackage[margin=1in]{geometry} % Change Margins
+\usepackage[margin=0.6in]{geometry} % Change Margins
 \usepackage[shortlabels]{enumitem} % Enum with letters
 
 % \ifpdf%                                % if we use pdflatex
@@ -340,26 +340,22 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         \end{enumerate}
         The playing field topology is such that, for any 2 locations, there is only a single path that joins them without backtracking. In essence, this means that, for each given location, there is only a single path to be learned to reach the terminal state. Being the playing field deterministic, and the Q-Matrix updated after each step means that the values in the Q-Matrix will monotonically increase until reaching their post convergence values. Based on this, the expected reward is propagated backwards from the terminal state to each location through multiple learning episodes in a way that actions leading to states closer to the terminal are guaranteed to always have higher rewards than ones leading away at any given moment in the learning process. Changes in $\alpha$ and $\gamma$ have the effect of changing the absolute values for actions within the Q-Matrix, but not their relative values towards other actions and, consequently, the decisions taken by a greedy agent.
 
-
     \subsection{Decay Rate - $\epsilon$}
         This scenario favors lower decay rates, this makes sense given the simplicity of the task to be learned.
-        The $\epsilon$-greedy policy has the effect of slowly increasing the greediness of the agent so that the randomness is constrained to state/action pairs neighbouring the then learned policy. This is necessary in situations with a large state/action space such that exhausting it is not feasible with available computing power.
-        Given the behaviour described in section \ref{sec:quali:gamma}, it is known that it is not necessary to wait for the Q-Matrix to fully converge (i.e. reach an equilibrium), as a small change in the Q-Matrix is suffices to lead a greedy agent towards the terminal state. The size of the board, and therefore the state-action pair space, is such that it can be exhausted by brute force with a somewhat low processing power available. Thus, having the agent taking random actions is enough to converge the Q-Matrix in considerably fast fashion.
-
-
-
-
-    analogy
+        The $\epsilon$-greedy policy has the effect of slowly increasing the greediness of the agent so that the randomness is constrained to state/action pairs neighbouring the slowly learned optimal policy. This is necessary in situations with a state/action space large enough that exhausting it is not feasible with the available computing power.
+        Given the behaviour described in section \ref{sec:quali:gamma}, it is known that it is not necessary to wait for the Q-Matrix to fully converge (i.e. reach an equilibrium), as a small change in the Q-Matrix is suffices to lead a greedy agent towards the terminal state. The size of the board, and therefore the state-action pair space, is such that it can be exhausted by brute force with a somewhat low processing power available. Thus, having the agent taking random actions is enough to fully explore the space and converge the Q-Matrix in considerably fast fashion. Given this, the benefits of using an $\epsilon$-greedy policy are greatly diminished. In this sense, the lower decay instances providing faster convergence to a 100\% win rate is merely a product of the agents' increased greediness, rather than the algorithm learning considerably faster.
 
 
 \section{Qualitative Analysis - Two Agents}
+    As observed in section \ref{sec:quant_analysis}, the implemented Q-Learning algorithm was unable to reach an optimal policy in a two agents scenario. This can be explained in terms of the topology of the playing field and movement rules applied. The game ends whenever both agents perform a move to the terminal state. Given the field topology this can only be reached with the following final moves:
+
+
+    This collection of moves means that the only direct move Agent 1 can take to reach terminal state is staying in place once Agent 2 has moved into position. In other words, Agent 1 is not able to fully traverse the state space with only actions of her own - the state space is detached into 2 groups. Considering that the Q-Learning'sample backup is only a single step deep, there is no way for this action's reward to propagate backwards through the Q-Matrix from one group to the other. This can be evidentiated by inspecting Agent 1's Q-Matrix after convergence. It expects the correct reward for the winning move (i.e. Staying in place when in state "0000021"), but expects 0 reward for all other state/action pairs. In other to circumvent this limitation there possible alternatives would be: have the agent's share information; and implement a learning algorithm that is able to propagate rewards backwards through multiple steps rather than a single one (e.g.: TD-Learning, Monte Carlo).
+
 \section{Advanced Reinforcement Learning Techniques}
+    The aim of this study is to observe the effects of independent agents collaborating in a multi-agent scenario, thus instead of implementing information sharing techniques, I decided to implement a RL technique which propagates rewards further back than a single action. The technique chosen was TD learning with eligibility traces. With a 2-step TD-Learning implementation, it is possible to have the algorithm converge to optimal solutions in a two agent scenario.
+
 \section{Q-learning and Psychological Error Correction Models}
 \section{Error Correction Implementation Proposal}
-
-
-
-\appendix
-\section{Q-Matrix update code}
 
 \end{document}
