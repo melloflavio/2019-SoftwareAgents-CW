@@ -223,6 +223,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     \subsection{Single agent}
         Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figure \ref{fig:exp1} shows, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
         \begin{figure}[h]
+            \centering
             \begin{minipage}{0.3\textwidth}
                 \includegraphics[height=4cm]{Images/exp_1/1_win_percent.png}
             \end{minipage}
@@ -242,6 +243,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         The initial results for experiments with two independent agents show that they fail to learn the correct path to terminal state. Figure \ref{fig:exp2:win} indicate how the agents are not able to reach the terminal state on a consistent basis, even after epsilon is near 0, meaning the agents are expected to always chose the action with the highest expected reward (i.e. the one that leads them faster to the terminal state). While figure \ref{fig:exp2:updates}, indicates that  there is little activity in agent 1's Q-Matrix, which appears to converge well before the shift to exploitation and also sooner than the experiment with a single agent. The figure also indicates continuous (an erratic) activity in agent 2's Q-Matrix, well after the shift to exploitation.
 
         \begin{figure}[t]
+            \centering
             \begin{minipage}{0.4\textwidth}
                 \includegraphics[height=5cm]{Images/exp_2/1_win_percent.png}
             \end{minipage}
@@ -254,6 +256,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         \end{figure}
 
         \begin{figure}[h]
+            \centering
             \includegraphics[height=5cm]{Images/exp_2/3_updates_per_step.png}
             \caption{Number of updates to Q Matrix per step taken in two-agent experiment}
             \label{fig:exp2:updates}
@@ -268,6 +271,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     \subsection{$\alpha$ values}
         Experiments were ran with six different values for $\alpha$, ranging from 0 to 1 (included). The results can be seen in figure \ref{fig:exp3}.
         \begin{figure}[h]
+            \centering
             \begin{minipage}[b]{0.4\textwidth}
                 \includegraphics[height=5cm]{Images/exp_3/1_win_percent.png}
             \end{minipage}
@@ -298,6 +302,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         Experiments were ran with the following \texttt{max\_steps} values: [4, 6, 8, 10, 30, 60, 100]. The lower bound of 4 was selected as it represents the maximum number of steps needed for a single agent to reach terminal state if following the optimal policy. The upper bound of 100 represent a value two orders of magnitude larger. The results are shown in figure \ref{fig:exp5}.
 
         \begin{figure}[h]
+            \centering
             \begin{minipage}[b]{0.4\textwidth}
                 \includegraphics[height=5cm]{Images/exp_5/1_win_percent.png}
             \end{minipage}
@@ -310,7 +315,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         \end{figure}
 
     \subsection{$\epsilon$ decay}
-        Regarding the $\epsilon$ decay, 2 different tests were done: \textbf{a)} Vary the threshold at which the decay changes; \textbf{b)} vary the $\epsilon$-decay rates.
+        Regarding the $\epsilon$ decay, 2 different tests were done: \textbf{a)} Vary the threshold at which the decay changes; \textbf{b)} vary the $\epsilon$-decay rates. Results are shown in figure \ref{fig:exp6}.
 
         \begin{figure}[h]
             \centering
@@ -367,7 +372,8 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     The aim of this study is to observe the effects of independent agents collaborating in a multi-agent scenario, thus instead of implementing information sharing techniques, I decided to implement a RL technique which propagates rewards further back than a single action. The technique chosen was TD($\lambda$) learning with eligibility traces. This technique updates the complete Q-Matrix every single step by leveraging a separate matrix used to track each state/action pair's eligibility based on how recent said pair was visited. A new hyperparameter $\lambda$ is introduced to control the speed of decay of the eligibility traces. The intuition behind this choice is that by being able to propagate rewards further back than a single step, the scenario with 2 independent agents will be able to converge to an optimal winning policy. The results for various values of $\lambda$ can be seen in figure \ref{fig:expII:winning}
 
     \begin{figure}[h]
-        \includegraphics[height=5cm]{Images/exp_II/1_winning.png}
+        \centering
+        \includegraphics[height=6cm]{Images/exp_II/1_winning.png}
         \caption{Win \% progression vs $\lambda$ - Two agents}
         \label{fig:expII:winning}
     \end{figure}
@@ -378,16 +384,41 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     To circumvent the issued caused by the dynamic environment observed by the individual agents, a small but powerful change was introduced to the Q-Learning implementation. When calculating the individual error for a given state/action pair, instead of comparing it with the best expected return for actions taken from the next state, the algorithm compares the old expected return with the best expected return for actions taken from the next \textbf{hyperstate}. In this context an hyperstate is defined as the collection of states reachable by actions taken from the other agent in her turn. In practical terms the next hyperstate is the group of states an agent may find herself in when their next turn is due. This has the double effect of \textbf{i)} removing the observed dynamicity of the environment by taking into account all possibilities for the next turn and \textbf{ii)} eliminating the detached nature of the state space that was introduced in the multi-agent scenario.
 
     \begin{figure}[h]
-        \includegraphics[height=5cm]{Images/exp_III/1_winning.png}
+        \centering
+        \includegraphics[height=6cm]{Images/exp_III/1_winning.png}
         \caption{Win \% progression - Hyperstate Q-Learning - Two agents}
         \label{fig:expIII:winning}
     \end{figure}
 
-    The results of the hyperstate Q-Learning (figure \ref{}) clearly show that this technique lead to the optimal policy convergence. It is important to note 2 important points regarding this implementation:
+    The results of the hyperstate Q-Learning (figure \ref{}) clearly show that this technique is able to lead to the optimal policy convergence. It is important to note 2 important points regarding this implementation:
     \begin{enumerate}[1)]
         \item It was based on standard Q-Learning, so the algorithm converges even when updating the Q-Matrix after each step (i.e. there is no need for holistic techniques such as TD($\lambda$))
         \item While this technique is able to treat the environment as static in the two agents scenario, the size of the next hyperstate increases exponentially with the number of players in the field. Thus for a large number of players this technique would become computationally too expensive and a different approach would be needed.
     \end{enumerate}
+
+    % Keep identation to left since \begin{python} respects current identation
+    \begin{python}[t]
+# Calculates all the possible states (i.e. hyperstate) a given agent may find herself in after taking
+# an action leading to "next_state". In other words, from the given next state, calculates all posible
+# states resulting from an action of the other agent/player.
+def get_next_hyperstate(next_state, current_agent):
+    num_agents = EXPERIMENT['num_agents']
+    next_agent_id = (current_agent % num_agents) + 1
+    hyperstate = get_available_moves(next_state, next_agent_id)
+
+    return hyperstate
+
+# Calculates the best expected return for a given state and agent while taking into account the hyperstate possibilities
+# from moves taken by the other agent
+def get_max_expected_return_hyperstate(next_state, current_agent_id):
+    next_hyperstate = get_next_hyperstate(next_state, current_agent_id)
+    best_returns = [get_max_expected_return(state, current_agent_id) for state in next_hyperstate]
+    best_expected_return = max(best_returns)
+
+    return best_expected_return
+    \end{python}
+    \begin{lstlisting}[caption=Implementation code for Hyperstate - Best expected return calculation, label=lst:hyperstate]
+    \end{lstlisting}
 
 \section{Q-learning and Psychological Error Correction Models}
 
