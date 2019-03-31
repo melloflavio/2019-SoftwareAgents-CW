@@ -221,7 +221,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
 
 \section{Initial Results}
     \subsection{Single agent}
-        Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figure \ref{fig:exp1} shows, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out with a moving window. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
+        Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figure \ref{fig:exp1} shows, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
         \begin{figure}[h]
             \begin{minipage}{0.3\textwidth}
                 \includegraphics[height=4cm]{Images/exp_1/1_win_percent.png}
@@ -279,13 +279,6 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
             \label{fig:exp3}
         \end{figure}
 
-        % \begin{figure}[h]
-
-        %     \caption{Win \% progression with varying $\alpha$ - Two agents}
-        %     \label{fig:exp3:win_percent_two}
-        % \end{figure}
-
-
     \subsection{$\gamma$ values}
         Experiments were ran with six different values for $\gamma$, ranging from 0 to 1 (included). The results can be seen in figure \ref{fig:exp4}.
         \begin{figure}[h]
@@ -301,12 +294,6 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
             \label{fig:exp4}
         \end{figure}
 
-        % \begin{figure}[h]
-        %     \includegraphics[height=4cm]{Images/exp_4/2_win_percent.png}
-        %     \caption{Win \% progression with varying $\gamma$ - Two agents}
-        %     \label{fig:exp4:win_percent_two}
-        % \end{figure}
-
     \subsection{Maximum Episode duration - \texttt{max\_steps}}
         Experiments were ran with the following \texttt{max\_steps} values: [4, 6, 8, 10, 30, 60, 100]. The lower bound of 4 was selected as it represents the maximum number of steps needed for a single agent to reach terminal state if following the optimal policy. The upper bound of 100 represent a value two orders of magnitude larger. The results are shown in figure \ref{fig:exp5}.
 
@@ -321,12 +308,6 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
             \caption{Win \% progression with varying \texttt{max\_steps} - Single agent(left) and Two agents (right)}
             \label{fig:exp5}
         \end{figure}
-
-        % \begin{figure}[h]
-
-        %     \caption{Win \% progression with varying \texttt{max\_steps} - Two agents}
-        %     \label{fig:exp5:win_percent_two}
-        % \end{figure}
 
     \subsection{$\epsilon$ decay}
         Regarding the $\epsilon$ decay, 2 different tests were done: \textbf{a)} Vary the threshold at which the decay changes; \textbf{b)} vary the $\epsilon$-decay rates.
