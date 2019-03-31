@@ -353,9 +353,34 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     This collection of moves means that the only direct move Agent 1 can take to reach terminal state is staying in place once Agent 2 has moved into position. In other words, Agent 1 is not able to fully traverse the state space with only actions of her own - the state space is detached into 2 groups. Considering that the Q-Learning'sample backup is only a single step deep, there is no way for this action's reward to propagate backwards through the Q-Matrix from one group to the other. This can be evidentiated by inspecting Agent 1's Q-Matrix after convergence. It expects the correct reward for the winning move (i.e. Staying in place when in state "0000021"), but expects 0 reward for all other state/action pairs. In other to circumvent this limitation there possible alternatives would be: have the agent's share information; and implement a learning algorithm that is able to propagate rewards backwards through multiple steps rather than a single one (e.g.: TD-Learning, Monte Carlo).
 
 \section{Advanced Reinforcement Learning Techniques}
-    The aim of this study is to observe the effects of independent agents collaborating in a multi-agent scenario, thus instead of implementing information sharing techniques, I decided to implement a RL technique which propagates rewards further back than a single action. The technique chosen was TD learning with eligibility traces. With a 2-step TD-Learning implementation, it is possible to have the algorithm converge to optimal solutions in a two agent scenario.
+    \subsection{TD($\lambda$)-learning}
+    The aim of this study is to observe the effects of independent agents collaborating in a multi-agent scenario, thus instead of implementing information sharing techniques, I decided to implement a RL technique which propagates rewards further back than a single action. The technique chosen was TD($\lambda$) learning with eligibility traces. This technique updates the complete Q-Matrix every single step by leveraging a separate matrix used to track each state/action pair's eligibility based on how recent said pair was visited. A new hyperparameter $\lambda$ is introduced to control the speed of decay of the eligibility traces. The intuition behind this choice is that by being able to propagate rewards further back than a single step, the scenario with 2 independent agents will be able to converge to an optimal winning policy. The results for various values of $\lambda$ can be seen in figure \ref{fig:expII:winning}
+
+    \begin{figure}[h]
+        \includegraphics[height=4cm]{Images/exp_II/1_winning.png}
+        \caption{Win \% progression vs $\lambda$ - Two agents}
+        \label{fig:expII:winning}
+    \end{figure}
+
+    As the results clearly show, TD($\lambda$) by itself is not able to reach an optimal policy in the two agent scenario. MOst interestingly is how the win rate keeps changing considerably after the agents enter into greedy mode. Upon further consideration and studies, it was found that this phenomenon happens due to the turn-by-turn nature of the game. From the perspective of an outside observer, the environment is static because the state only changes due to an action by either agent. However, from the perspective of each single agent, it is a dynamic environment because the state at which they take the next step is different from the state reached by her previous step. In practical terms, in TD($\lambda$) this means that the Q-Matrix will be updated in disorderly fashion, for each agent an state/action pair is updated while taking into account possible future action from states that said agent might not be visit in this episode. The backpropagating nature of Q and TD($\lambda$) Learning means that, for scenarios with only positive rewards, when calculating an error the best expected return for a future action taken from state \texttt{s} is larger than the expected return from an action leading to state \texttt{s}. Thus the error is always positive and the expected returns for all state/action pairs monotonically increase until reaching convergence. By the dynamicity introduced by two agents taking turns, this will not hold true. A side effect of this can be observed in the win \% decreasing after the agents enter into greedy mode. What little was learned from the environment is gradually "unlearned" by the agent's observing 0 reward for their general actions and decreasing the values in the Q-Matrix.
+
+    \subsection{Hyperstate Q-Learning}
+    To circumvent the issued caused by the dynamic environment observed by the individual agents, a small but powerful change was introduced to the Q-Learning implementation. When calculating the individual error for a given state/action pair, instead of comparing it with the best expected return for actions taken from the next state, the algorithm compares the old expected return with the best expected return for actions taken from the next \textbf{hyperstate}. In this context an hyperstate is defined as the collection of states reachable by actions taken from the other agent in her turn. In practical terms the next hyperstate is the group of states an agent may find herself in when their next turn is due. This has the double effect of \textbf{i)} removing the observed dynamicity of the environment by taking into account all possibilities for the next turn and \textbf{ii)} eliminating the detached nature of the state space that was introduced in the multi-agent scenario.
+
+    \begin{figure}[h]
+        \includegraphics[height=4cm]{Images/exp_III/1_winning.png}
+        \caption{Win \% progression - Hyperstate Q-Learning - Two agents}
+        \label{fig:expIII:winning}
+    \end{figure}
+
+    The results of the hyperstate Q-Learning (figure \ref{}) clearly show that this technique lead to the optimal policy convergence. It is important to note 2 important points regarding this implementation:
+    \begin{enumerate}[1)]
+        \item It was based on standard Q-Learning, so the algorithm converges even when updating the Q-Matrix after each step (i.e. there is no need for holistic techniques such as TD($\lambda$))
+        \item While this technique is able to treat the environment as static in the two agents scenario, the size of the next hyperstate increases exponentially with the number of players in the field. Thus for a large number of players this technique would become computationally too expensive and a different approach would be needed.
+    \end{enumerate}
 
 \section{Q-learning and Psychological Error Correction Models}
+
 \section{Error Correction Implementation Proposal}
 
 \end{document}

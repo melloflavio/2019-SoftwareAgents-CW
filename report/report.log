@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  28 MAR 2019 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  31 MAR 2019 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1272,7 +1272,44 @@ LaTeX Warning: Reference `sec:quali:gamma' on page 11 undefined on input line 34
 
 LaTeX Warning: Reference `sec:quant_analysis' on page 12 undefined on input line 350.
 
-[12] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
+
+LaTeX Warning: Reference `fig:expII:winning' on page 12 undefined on input line 357.
+
+
+LaTeX Warning: File `Images/exp_II/1_winning.png' not found on input line 360.
+
+
+c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex:360: Package pdftex.def Error: File `Images/exp_II/1_winning.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360 ...[height=4cm]{Images/exp_II/1_winning.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12]
+
+LaTeX Warning: File `Images/exp_III/1_winning.png' not found on input line 371.
+
+
+c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.tex:371: Package pdftex.def Error: File `Images/exp_III/1_winning.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 ...height=4cm]{Images/exp_III/1_winning.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 376.
+
+[13] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1281,18 +1318,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9909 strings out of 492616
- 145257 string characters out of 6132768
+ 9915 strings out of 492616
+ 145336 string characters out of 6132768
  501960 words of memory out of 5000000
- 13491 multiletter control sequences out of 15000+600000
+ 13494 multiletter control sequences out of 15000+600000
  49107 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,48p,1899b,1624s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 486935 bytes).
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (13 pages, 491250 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26680 words of extra memory for PDF output out of 29859 (max. 10000000)
 
