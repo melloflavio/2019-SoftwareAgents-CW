@@ -3,7 +3,7 @@
 % \documentclass[widereview]{vgtc}             % wide-spaced review
 % \documentclass[preprint,journal]{vgtc}       % preprint (journal style)
 % First we choose the document class (can be book, report, article etc.)
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 % \documentclass[11pt, twocolumn]{elsarticle}
 % \documentclass{ieeetran}
 
@@ -39,7 +39,7 @@
 \usepackage{cite}                      % needed to automatically sort the references
 
 
-\title{Title of my document}
+\title{Suitability Study of Reinforcement Learning Techniques to Solve a Two-Agent Cooperative Game}
 % \date{2019-0}
 \author{Flavio R. de A. F. Mello}
 
@@ -99,13 +99,17 @@
 
     \begin{figure}[h]
         \centering
-        \includegraphics[height=4cm]{./Images/2_Playing_Field_Indexed.jpg}
-        \caption{Playing field with location ids}
-        \label{fig:field_indexed}
-
-        \includegraphics[height=4cm]{./Images/3_Playing_Field_Encoding.jpg}
-        \caption{State string with equivalent playing field representation}
-        \label{fig:field_mapping}
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[height=4cm]{./Images/2_Playing_Field_Indexed.jpg}
+            \caption{Playing field with location ids}
+            \label{fig:field_indexed}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.5\textwidth}
+            \includegraphics[height=4cm]{./Images/3_Playing_Field_Encoding.jpg}
+            \caption{State string with equivalent playing field representation}
+            \label{fig:field_mapping}
+        \end{minipage}
     \end{figure}
 
 
@@ -177,7 +181,7 @@
         In this study, the reward and penalty values are defined arbitrarily, given the abstract nature of the experiment. As noted in section \ref{sec:r_matrix}, the initial values for reward and penalty are 100 and -100, respectively.
 
     \subsection{Number of Agents - (\texttt{num\_agents})}
-        For implementation purposes, the number of agents in a experiment is also configurable. The initial experiments take place with both 1 and 2 agents settings.
+        For implementation purposes, the number of agents in a experiment is also configurable. The experiments were run with both 1 and 2 agents settings.
 
 \section{Q-Matrix Update Cycle}
     Central to the Q-Learning algorithm is the Q-Matrix update cycle. After each step taken by an agent, it's associated Q-Matrix is updated. The new value for the origin($s$)/action($a$) pair ($Q(s,a)_{new}$) is calculated based on the old origin/action value ($Q(s,a)_{old}$); the reward/penalty observed ($r$); the maximum expected return (as per the current Q-matrix) for future actions($a'$) taken from the destination state ($s'$) $\Rightarrow$ $max_{a'} Q(s',a')$; and the learning parameters discount factor ($\gamma$) and learning rate ($\alpha$). The equation used for updating the value is:
@@ -186,7 +190,7 @@
         Q(s,a)_{new} = Q(s,a)_{old} + \alpha*[r+\gamma*max_{a'} Q(s',a') - Q(s,a)_{old}]
     \end{equation}
 
-    Implementation-wise the code, in Python, used for updating the Q-Matrix is the following:
+    Implementation-wise the code, in Python, used for updating the Q-Matrix is shown in \ref{lst:q_update_code}
 
 \onecolumn
 % Keep identation to left since \begin{python} respects current identation
@@ -212,40 +216,45 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     # Update value in current agent's Q-matrix
     current_q.loc[current_state, next_state] = new_expected_return
     \end{python}
+    \begin{lstlisting}[caption=Implementation code for Q-Matrix Update, label=lst:q_update_code]
+    \end{lstlisting}
 
 \section{Initial Results}
     \subsection{Single agent}
-        Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figures \ref{fig:exp1:win_percent}, \ref{fig:exp1:steps} and \ref{fig:exp1:updates} show, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out with a moving window. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
+        Initial results indicate that, for the 1 agent variant, the system is able to learn how to reach the terminal state. Figure \ref{fig:exp1} shows, over the course of the experiment, respectively: the win \% (i.e. episode did reach terminal state); number of steps per episode; and number of updates to Q matrix per step taken. All graphs were calculated with a moving window of 100 episodes to smooth out variations due to randomized initial condition and noise in case of boolean values (e.g. win \%). The graphs also contain the epsilon value per episode, which was not smoothed out with a moving window. Figure \ref{fig:exp1:win_percent} indicates that after a little more than 1000 episodes, the agent is able to consistently reach the terminal state every single time, while \ref{fig:exp1:steps} indicate that not only the agent consistently reaches the terminal state, but does so with increasing efficiency, reaching an average of 4 steps per episode. Finally figure \ref{fig:exp1:updates} indicates strong activity in updating the Q-Matrix in the beginning of the experiment. Given that the decrease in update activity coincides with the dramatically increase in exploitation probability it is not possible to determine whether the root cause of such phenomenon is due to complete convergence of the Q-Matrix, or due to a specific path being preferred and continuously exploited. Given the simplicity of the maze for a single agent it is arguable that both phenomena occur in tandem since, for each initial state, there is a single direct path towards the terminal state.
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_1/1_win_percent.png}
+            \begin{minipage}{0.3\textwidth}
+                \includegraphics[height=4cm]{Images/exp_1/1_win_percent.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\textwidth}
+                \includegraphics[height=4cm]{Images/exp_1/2_total_steps.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.3\textwidth}
+                \includegraphics[height=4cm]{Images/exp_1/3_updates_per_step.png}
+            \end{minipage}
             \caption{Percentage of episodes able to reach terminal state in single agent experiment}
-            \label{fig:exp1:win_percent}
-        \end{figure}
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_1/2_total_steps.png}
-            \caption{Steps taken per episode in single agent experiment}
-            \label{fig:exp1:steps}
-        \end{figure}
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_1/3_updates_per_step.png}
-            \caption{Number of updates to Q Matrix per step taken in single agent experiment}
-            \label{fig:exp1:updates}
+            \label{fig:exp1:win}
         \end{figure}
 
     \subsection{Two agents}
-        The initial results for experiments with two independent agents show that they fail to learn the correct path to terminal state. Figures \ref{fig:exp2:win_percent} and \ref{fig:exp2:steps} indicate how the agents are not able to reach the terminal state on a consistent basis, even after epsilon is near 0, meaning the agents are expected to always chose the action with the highest expected reward (i.e. the one that leads them faster to the terminal state). While figure \ref{fig:exp2:updates}, indicates that  there is little activity in agent 1's Q-Matrix, which appears to converge well before the shift to exploitation and also sooner than the experiment with a single agent. The figure also indicates continuous (an erratic) activity in agent 2's Q-Matrix, well after the shift to exploitation.
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_2/1_win_percent.png}
-            \caption{Percentage of episodes able to reach terminal state in two-agent experiment}
-            \label{fig:exp2:win_percent}
+        The initial results for experiments with two independent agents show that they fail to learn the correct path to terminal state. Figure \ref{fig:exp2:win} indicate how the agents are not able to reach the terminal state on a consistent basis, even after epsilon is near 0, meaning the agents are expected to always chose the action with the highest expected reward (i.e. the one that leads them faster to the terminal state). While figure \ref{fig:exp2:updates}, indicates that  there is little activity in agent 1's Q-Matrix, which appears to converge well before the shift to exploitation and also sooner than the experiment with a single agent. The figure also indicates continuous (an erratic) activity in agent 2's Q-Matrix, well after the shift to exploitation.
+
+        \begin{figure}[t]
+            \begin{minipage}{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_2/1_win_percent.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_2/2_total_steps.png}
+            \end{minipage}
+            \caption{Two agents experiment - Win \% (left) and steps per episode (right)}
+            \label{fig:exp2:win}
         \end{figure}
+
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_2/2_total_steps.png}
-            \caption{Steps taken per episode in two-agent experiment}
-            \label{fig:exp2:steps}
-        \end{figure}
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_2/3_updates_per_step.png}
+            \includegraphics[height=5cm]{Images/exp_2/3_updates_per_step.png}
             \caption{Number of updates to Q Matrix per step taken in two-agent experiment}
             \label{fig:exp2:updates}
         \end{figure}
@@ -257,62 +266,82 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         As specified in section \ref{sec:params:duration}, the experiment duration dictates how many episodes are ran per experiment. Considering that the scenario is deterministic, static, and the state-space is finite and small (i.e.: feasibly exhaustible), the experiments are expected to converge after a certain number of learning episodes and remain stable after that. Following that logic, in order to study the behaviour of agent's learning, it suffices to constrain the number of episodes to be enough to show the learning stage and a sample of the post converged regime. In order to speed up the simulations while still being able to represent the whole phenomenon, the number of episodes used is lowered to 2500. In some specific cases this number may not be enough to show the complete picture, such instances are dealt on an ad-hoc basis by increasing the number of episodes, as needed, for that particular experiment.
 
     \subsection{$\alpha$ values}
-        Experiments were ran with six different values for $\alpha$, ranging from 0 to 1 (included). The results can be seen in figures \ref{fig:exp3:win_percent} and \ref{fig:exp3:win_percent_two}
+        Experiments were ran with six different values for $\alpha$, ranging from 0 to 1 (included). The results can be seen in figure \ref{fig:exp3}.
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_3/1_win_percent.png}
-            \caption{Win \% progression with varying $\alpha$ - Single agent}
-            \label{fig:exp3:win_percent}
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_3/1_win_percent.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_3/2_win_percent.png}
+            \end{minipage}
+            \caption{Win \% progression with varying $\alpha$ - Single agent(left) and Two agents (right)}
+            \label{fig:exp3}
         \end{figure}
 
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_3/2_win_percent.png}
-            \caption{Win \% progression with varying $\alpha$ - Two agents}
-            \label{fig:exp3:win_percent_two}
-        \end{figure}
+        % \begin{figure}[h]
+
+        %     \caption{Win \% progression with varying $\alpha$ - Two agents}
+        %     \label{fig:exp3:win_percent_two}
+        % \end{figure}
 
 
     \subsection{$\gamma$ values}
-        Experiments were ran with six different values for $\gamma$, ranging from 0 to 1 (included). The results can be seen in figures \ref{fig:exp4:win_percent} and \ref{fig:exp4:win_percent_two}
+        Experiments were ran with six different values for $\gamma$, ranging from 0 to 1 (included). The results can be seen in figure \ref{fig:exp4}.
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_4/1_win_percent.png}
-            \caption{Win \% progression with varying $\gamma$ - Single agent}
-            \label{fig:exp4:win_percent}
+            \centering
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_4/1_win_percent.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_4/2_win_percent.png}
+            \end{minipage}
+            \caption{Win \% progression with varying $\gamma$ - Single agent(left) and Two agents(right)}
+            \label{fig:exp4}
         \end{figure}
 
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_4/2_win_percent.png}
-            \caption{Win \% progression with varying $\gamma$ - Two agents}
-            \label{fig:exp4:win_percent_two}
-        \end{figure}
+        % \begin{figure}[h]
+        %     \includegraphics[height=4cm]{Images/exp_4/2_win_percent.png}
+        %     \caption{Win \% progression with varying $\gamma$ - Two agents}
+        %     \label{fig:exp4:win_percent_two}
+        % \end{figure}
 
     \subsection{Maximum Episode duration - \texttt{max\_steps}}
-        Experiments were ran with the following \texttt{max\_steps} values: [4, 6, 8, 10, 30, 60, 100]. The lower bound of 4 was selected as it represents the maximum number of steps needed for a single agent to reach terminal state if following the optimal policy. The upper bound of 100 represent a value two orders of magnitude larger. The results are shown in figures \ref{fig:exp5:win_percent} and \ref{fig:exp5:win_percent_two}
+        Experiments were ran with the following \texttt{max\_steps} values: [4, 6, 8, 10, 30, 60, 100]. The lower bound of 4 was selected as it represents the maximum number of steps needed for a single agent to reach terminal state if following the optimal policy. The upper bound of 100 represent a value two orders of magnitude larger. The results are shown in figure \ref{fig:exp5}.
 
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_5/1_win_percent.png}
-            \caption{Win \% progression with varying \texttt{max\_steps} - Single agent}
-            \label{fig:exp5:win_percent}
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_5/1_win_percent.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_5/2_win_percent.png}
+            \end{minipage}
+            \caption{Win \% progression with varying \texttt{max\_steps} - Single agent(left) and Two agents (right)}
+            \label{fig:exp5}
         \end{figure}
 
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_5/2_win_percent.png}
-            \caption{Win \% progression with varying \texttt{max\_steps} - Two agents}
-            \label{fig:exp5:win_percent_two}
-        \end{figure}
+        % \begin{figure}[h]
+
+        %     \caption{Win \% progression with varying \texttt{max\_steps} - Two agents}
+        %     \label{fig:exp5:win_percent_two}
+        % \end{figure}
 
     \subsection{$\epsilon$ decay}
-        Regarding the $\epsilon$ decay, 2 different tests were done: a) Vary the threshold at which the decay changes; and b) Vary the $\epsilon$-decay rates.
+        Regarding the $\epsilon$ decay, 2 different tests were done: \textbf{a)} Vary the threshold at which the decay changes; \textbf{b)} vary the $\epsilon$-decay rates.
 
         \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_6/1_change.png}
-            \caption{Win \% progression with varying $\epsilon$ decay change threshold  - Single agent}
-            \label{fig:exp6:change}
-        \end{figure}
-
-        \begin{figure}[h]
-            \includegraphics[height=4cm]{Images/exp_6/2_threshold.png}
-            \caption{Win \% progression with varying $\epsilon$ decay rate - Single agent}
-            \label{fig:exp5:threshold}
+            \centering
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_6/1_change.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.4\textwidth}
+                \includegraphics[height=5cm]{Images/exp_6/2_threshold.png}
+            \end{minipage}
+            \caption{Single agent Win \% progression: varying $\epsilon$ decay change threshold(left) and varying $\epsilon$ decay rate(right)}
+            \label{fig:exp6}
         \end{figure}
 
 
@@ -357,7 +386,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     The aim of this study is to observe the effects of independent agents collaborating in a multi-agent scenario, thus instead of implementing information sharing techniques, I decided to implement a RL technique which propagates rewards further back than a single action. The technique chosen was TD($\lambda$) learning with eligibility traces. This technique updates the complete Q-Matrix every single step by leveraging a separate matrix used to track each state/action pair's eligibility based on how recent said pair was visited. A new hyperparameter $\lambda$ is introduced to control the speed of decay of the eligibility traces. The intuition behind this choice is that by being able to propagate rewards further back than a single step, the scenario with 2 independent agents will be able to converge to an optimal winning policy. The results for various values of $\lambda$ can be seen in figure \ref{fig:expII:winning}
 
     \begin{figure}[h]
-        \includegraphics[height=4cm]{Images/exp_II/1_winning.png}
+        \includegraphics[height=5cm]{Images/exp_II/1_winning.png}
         \caption{Win \% progression vs $\lambda$ - Two agents}
         \label{fig:expII:winning}
     \end{figure}
@@ -368,7 +397,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     To circumvent the issued caused by the dynamic environment observed by the individual agents, a small but powerful change was introduced to the Q-Learning implementation. When calculating the individual error for a given state/action pair, instead of comparing it with the best expected return for actions taken from the next state, the algorithm compares the old expected return with the best expected return for actions taken from the next \textbf{hyperstate}. In this context an hyperstate is defined as the collection of states reachable by actions taken from the other agent in her turn. In practical terms the next hyperstate is the group of states an agent may find herself in when their next turn is due. This has the double effect of \textbf{i)} removing the observed dynamicity of the environment by taking into account all possibilities for the next turn and \textbf{ii)} eliminating the detached nature of the state space that was introduced in the multi-agent scenario.
 
     \begin{figure}[h]
-        \includegraphics[height=4cm]{Images/exp_III/1_winning.png}
+        \includegraphics[height=5cm]{Images/exp_III/1_winning.png}
         \caption{Win \% progression - Hyperstate Q-Learning - Two agents}
         \label{fig:expIII:winning}
     \end{figure}
