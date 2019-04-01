@@ -38,6 +38,7 @@
 \renewcommand*\ttdefault{txtt}         % a nicer typewriter font
 \usepackage{cite}                      % needed to automatically sort the references
 
+\renewcommand{\lstlistingname}{Code}% Listing -> Code => https://tex.stackexchange.com/questions/64839/how-to-change-listing-caption
 
 \title{Suitability Study of Reinforcement Learning Techniques to Solve a Two-Agent Cooperative Game}
 % \date{2019-0}
@@ -186,11 +187,11 @@
 \section{Q-Matrix Update Cycle}
     Central to the Q-Learning algorithm is the Q-Matrix update cycle. After each step taken by an agent, it's associated Q-Matrix is updated. The new value for the origin($s$)/action($a$) pair ($Q(s,a)_{new}$) is calculated based on the old origin/action value ($Q(s,a)_{old}$); the reward/penalty observed ($r$); the maximum expected return (as per the current Q-matrix) for future actions($a'$) taken from the destination state ($s'$) $\Rightarrow$ $max_{a'} Q(s',a')$; and the learning parameters discount factor ($\gamma$) and learning rate ($\alpha$). The equation used for updating the value is:
 
-    \begin{equation}
+    \begin{equation}\label{eq:q_update}
         Q(s,a)_{new} = Q(s,a)_{old} + \alpha*[r+\gamma*max_{a'} Q(s',a') - Q(s,a)_{old}]
     \end{equation}
 
-    Implementation-wise the code, in Python, used for updating the Q-Matrix is shown in \ref{lst:q_update_code}
+    Implementation-wise the code, in Python, used for updating the Q-Matrix is shown in Code \ref{lst:q_update_code}
 
 \onecolumn
 % Keep identation to left since \begin{python} respects current identation
@@ -345,7 +346,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         Differently from the experiment duration, which only varies the observed window of the learning process, the maximum episode duration may affect the learning process to the extent that longer episodes increase the chance of randomly reaching the terminal state as well as increase the probability of propagating the return expectation throughout the Q-Matrix as more actions are taken per episode. So, if we are to measure the win \% in terms of episodes, the average win \% is expected to be directly correlated to the maximum number of steps allowed per episode.
 
     \subsection{$\alpha$ and $\gamma$}\label{sec:quali:gamma}
-        Initially, it may seem strange that two of the most prominent hyperparameters in Q-Learning have little effect in the rate at with the algorithm converges in terms of win \%. This behaviour, however, can be fully explained by the inner workings of the Q-Learning algorithm coupled with the topology of the playing field. Such invariance to changes in $\alpha$ and $\gamma$ can be explained by four factors:
+        Initially, it may seem strange that two of the most prominent hyperparameters in Q-Learning have little effect in the rate at with the algorithm converges in terms of win \%. This behaviour, however, can be fully explained by the inner workings of the Q-Learning algorithm coupled with the topology of the playing field. Such invariance to changes in $\alpha$ and $\gamma$ can be explained by five factors:
         \begin{enumerate}[a)]
             \item the field is a narrow corridor with no loops
             \item there is a single positive reward source/state and no punishment(negative reward) is ever given
@@ -381,7 +382,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
     As the results clearly show, TD($\lambda$) by itself is not able to reach an optimal policy in the two agent scenario. MOst interestingly is how the win rate keeps changing considerably after the agents enter into greedy mode. Upon further consideration and studies, it was found that this phenomenon happens due to the turn-by-turn nature of the game. From the perspective of an outside observer, the environment is static because the state only changes due to an action by either agent. However, from the perspective of each single agent, it is a dynamic environment because the state at which they take the next step is different from the state reached by her previous step. In practical terms, in TD($\lambda$) this means that the Q-Matrix will be updated in disorderly fashion, for each agent an state/action pair is updated while taking into account possible future action from states that said agent might not be visit in this episode. The backpropagating nature of Q and TD($\lambda$) Learning means that, for scenarios with only positive rewards, when calculating an error the best expected return for a future action taken from state \texttt{s} is larger than the expected return from an action leading to state \texttt{s}. Thus the error is always positive and the expected returns for all state/action pairs monotonically increase until reaching convergence. By the dynamicity introduced by two agents taking turns, this will not hold true. A side effect of this can be observed in the win \% decreasing after the agents enter into greedy mode. What little was learned from the environment is gradually "unlearned" by the agent's observing 0 reward for their general actions and decreasing the values in the Q-Matrix.
 
     \subsection{Hyperstate Q-Learning}
-    To circumvent the issued caused by the dynamic environment observed by the individual agents, a small but powerful change was introduced to the Q-Learning implementation. When calculating the individual error for a given state/action pair, instead of comparing it with the best expected return for actions taken from the next state, the algorithm compares the old expected return with the best expected return for actions taken from the next \textbf{hyperstate}. In this context an hyperstate is defined as the collection of states reachable by actions taken from the other agent in her turn. In practical terms the next hyperstate is the group of states an agent may find herself in when their next turn is due. This has the double effect of \textbf{i)} removing the observed dynamicity of the environment by taking into account all possibilities for the next turn and \textbf{ii)} eliminating the detached nature of the state space that was introduced in the multi-agent scenario.
+    To circumvent the issued caused by the dynamic environment observed by the individual agents, a small but powerful change was introduced to the Q-Learning implementation. When calculating the individual error for a given state/action pair, instead of comparing it with the best expected return for actions taken from the next state, the algorithm compares the old expected return with the best expected return for actions taken from the next \textbf{hyperstate}. In this context an hyperstate is defined as the collection of states reachable by actions taken from the other agent in her turn. In practical terms the next hyperstate is the group of states an agent may find herself in when their next turn is due. This has the double effect of \textbf{i)} removing the observed dynamicity of the environment by taking into account all possibilities for the next turn and \textbf{ii)} eliminating the detached nature of the state space that was introduced in the multi-agent scenario. Implementation-wise this algorithm is identical to Q-Learning, except for the Q-Matrix update code (as seen in equation \ref{eq:q_update}), in which the maximum expected return for actions taken from the destination state($max_{a'} Q(s',a')$) is substituted by the hyperstate variant. A sample of the implementation, in python, for calculating the hyperstate from the destination state, and obtaining the maximum expected return from it can be seen in Code \ref{lst:hyperstate}.
 
     \begin{figure}[h]
         \centering
@@ -408,8 +409,8 @@ def get_next_hyperstate(next_state, current_agent):
 
     return hyperstate
 
-# Calculates the best expected return for a given state and agent while taking into account the hyperstate possibilities
-# from moves taken by the other agent
+# Calculates the best expected return for a given state and agent while taking into account the hyperstate
+# possibilities from moves taken by the other agent
 def get_max_expected_return_hyperstate(next_state, current_agent_id):
     next_hyperstate = get_next_hyperstate(next_state, current_agent_id)
     best_returns = [get_max_expected_return(state, current_agent_id) for state in next_hyperstate]
@@ -421,6 +422,11 @@ def get_max_expected_return_hyperstate(next_state, current_agent_id):
     \end{lstlisting}
 
 \section{Q-learning and Psychological Error Correction Models}
+
+Q-Learning
+
+\subsection{Eligibility Traces}
+\subsection{Montecarlo & }
 
 \section{Error Correction Implementation Proposal}
 
