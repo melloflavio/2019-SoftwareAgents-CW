@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  2 APR 2019 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  2 APR 2019 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,15 +869,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(43.36243pt, 527.57014pt, 43.36243pt)
-* v-part:(T,H,B)=(43.36243pt, 708.24513pt, 43.36243pt)
+* h-part:(L,W,R)=(50.58878pt, 513.11745pt, 50.58878pt)
+* v-part:(T,H,B)=(50.58878pt, 693.79243pt, 50.58878pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=527.57014pt
-* \textheight=708.24513pt
-* \oddsidemargin=-28.90756pt
-* \evensidemargin=-28.90756pt
-* \topmargin=-65.90756pt
+* \textwidth=513.11745pt
+* \textheight=693.79243pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-58.68121pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -945,32 +945,29 @@ File: ./Images/1_Playing_Field.jpg Graphic file (type jpg)
 <use ./Images/1_Playing_Field.jpg>
 Package pdftex.def Info: ./Images/1_Playing_Field.jpg  used on input line 84.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
-<./Images/2_Playing_Field_Indexed.jpg, id=2, 1798.72pt x 1284.8pt>
+ [1
+
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/1_Playing_Field.jpg>]
+<./Images/2_Playing_Field_Indexed.jpg, id=9, 1798.72pt x 1284.8pt>
 File: ./Images/2_Playing_Field_Indexed.jpg Graphic file (type jpg)
 <use ./Images/2_Playing_Field_Indexed.jpg>
 Package pdftex.def Info: ./Images/2_Playing_Field_Indexed.jpg  used on input line 104.
 (pdftex.def)             Requested size: 159.32532pt x 113.81102pt.
 
-Overfull \hbox (1.05267pt too wide) in paragraph at lines 104--105
+Overfull \hbox (5.38852pt too wide) in paragraph at lines 104--105
 [][] 
  []
 
-<./Images/3_Playing_Field_Encoding.jpg, id=3, 903.375pt x 385.44pt>
+<./Images/3_Playing_Field_Encoding.jpg, id=10, 903.375pt x 385.44pt>
 File: ./Images/3_Playing_Field_Encoding.jpg Graphic file (type jpg)
 <use ./Images/3_Playing_Field_Encoding.jpg>
 Package pdftex.def Info: ./Images/3_Playing_Field_Encoding.jpg  used on input line 110.
 (pdftex.def)             Requested size: 266.74144pt x 113.81102pt.
 
-Overfull \hbox (2.95638pt too wide) in paragraph at lines 110--111
+Overfull \hbox (10.18272pt too wide) in paragraph at lines 110--111
 [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1
-
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/1_Playing_Field.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -982,7 +979,7 @@ File: ./Images/4_TransitionGraph.jpg Graphic file (type jpg)
 <use ./Images/4_TransitionGraph.jpg>
 Package pdftex.def Info: ./Images/4_TransitionGraph.jpg  used on input line 136.
 (pdftex.def)             Requested size: 174.60942pt x 113.81102pt.
- [2 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
+[2 <./Images/2_Playing_Field_Indexed.jpg> <./Images/3_Playing_Field_Encoding.jpg>]
 <./Images/5_R_Matrix.png, id=20, 472.76625pt x 168.63pt>
 File: ./Images/5_R_Matrix.png Graphic file (type png)
 <use ./Images/5_R_Matrix.png>
@@ -1027,7 +1024,7 @@ File: Images/exp_1/1_win_percent.png Graphic file (type png)
 Package pdftex.def Info: Images/exp_1/1_win_percent.png  used on input line 229.
 (pdftex.def)             Requested size: 175.5555pt x 113.81102pt.
 
-Overfull \hbox (17.28285pt too wide) in paragraph at lines 229--230
+Overfull \hbox (21.6187pt too wide) in paragraph at lines 229--230
 [][] 
  []
 
@@ -1037,7 +1034,7 @@ File: Images/exp_1/2_total_steps.png Graphic file (type png)
 Package pdftex.def Info: Images/exp_1/2_total_steps.png  used on input line 233.
 (pdftex.def)             Requested size: 171.51973pt x 113.81102pt.
 
-Overfull \hbox (13.24709pt too wide) in paragraph at lines 233--234
+Overfull \hbox (17.58293pt too wide) in paragraph at lines 233--234
 [][] 
  []
 
@@ -1047,7 +1044,7 @@ File: Images/exp_1/3_updates_per_step.png Graphic file (type png)
 Package pdftex.def Info: Images/exp_1/3_updates_per_step.png  used on input line 237.
 (pdftex.def)             Requested size: 172.73045pt x 113.81102pt.
 
-Overfull \hbox (14.45781pt too wide) in paragraph at lines 237--238
+Overfull \hbox (18.79366pt too wide) in paragraph at lines 237--238
 [][] 
  []
 
@@ -1057,7 +1054,7 @@ File: Images/exp_2/1_win_percent.png Graphic file (type png)
 Package pdftex.def Info: Images/exp_2/1_win_percent.png  used on input line 249.
 (pdftex.def)             Requested size: 219.45436pt x 142.26378pt.
 
-Overfull \hbox (8.42953pt too wide) in paragraph at lines 249--250
+Overfull \hbox (14.21053pt too wide) in paragraph at lines 249--250
 [][] 
  []
 
@@ -1067,28 +1064,25 @@ File: Images/exp_2/2_total_steps.png Graphic file (type png)
 Package pdftex.def Info: Images/exp_2/2_total_steps.png  used on input line 253.
 (pdftex.def)             Requested size: 214.40942pt x 142.26378pt.
 
-Overfull \hbox (3.3846pt too wide) in paragraph at lines 253--254
+Overfull \hbox (9.16559pt too wide) in paragraph at lines 253--254
 [][] 
  []
-
-<Images/exp_2/3_updates_per_step.png, id=37, 436.63126pt x 283.0575pt>
-File: Images/exp_2/3_updates_per_step.png Graphic file (type png)
-<use Images/exp_2/3_updates_per_step.png>
-Package pdftex.def Info: Images/exp_2/3_updates_per_step.png  used on input line 261.
-(pdftex.def)             Requested size: 219.45436pt x 142.26378pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5
 
  <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_1/3_updates_per_step.png>]
+<Images/exp_2/3_updates_per_step.png, id=44, 436.63126pt x 283.0575pt>
+File: Images/exp_2/3_updates_per_step.png Graphic file (type png)
+<use Images/exp_2/3_updates_per_step.png>
+Package pdftex.def Info: Images/exp_2/3_updates_per_step.png  used on input line 261.
+(pdftex.def)             Requested size: 219.45436pt x 142.26378pt.
 <Images/exp_3/1_win_percent.png, id=45, 436.63126pt x 283.0575pt>
 File: Images/exp_3/1_win_percent.png Graphic file (type png)
 <use Images/exp_3/1_win_percent.png>
 Package pdftex.def Info: Images/exp_3/1_win_percent.png  used on input line 277.
 (pdftex.def)             Requested size: 219.45436pt x 142.26378pt.
 
-Overfull \hbox (8.42953pt too wide) in paragraph at lines 277--278
+Overfull \hbox (14.21053pt too wide) in paragraph at lines 277--278
 [][] 
  []
 
@@ -1113,53 +1107,55 @@ Package pdftex.def Info: Images/exp_4/2_win_percent.png  used on input line 296.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/exp_5/1_win_percent.png, id=49, 393.47pt x 283.0575pt>
+[6 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/3_updates_per_step.png>]
+<Images/exp_5/1_win_percent.png, id=55, 393.47pt x 283.0575pt>
 File: Images/exp_5/1_win_percent.png Graphic file (type png)
 <use Images/exp_5/1_win_percent.png>
 Package pdftex.def Info: Images/exp_5/1_win_percent.png  used on input line 308.
 (pdftex.def)             Requested size: 197.76117pt x 142.26378pt.
-<Images/exp_5/2_win_percent.png, id=50, 393.47pt x 283.0575pt>
+<Images/exp_5/2_win_percent.png, id=56, 393.47pt x 283.0575pt>
 File: Images/exp_5/2_win_percent.png Graphic file (type png)
 <use Images/exp_5/2_win_percent.png>
 Package pdftex.def Info: Images/exp_5/2_win_percent.png  used on input line 312.
 (pdftex.def)             Requested size: 197.76117pt x 142.26378pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/exp_6/1_change.png, id=51, 393.47pt x 283.0575pt>
+<Images/exp_6/1_change.png, id=57, 393.47pt x 283.0575pt>
 File: Images/exp_6/1_change.png Graphic file (type png)
 <use Images/exp_6/1_change.png>
 Package pdftex.def Info: Images/exp_6/1_change.png  used on input line 324.
 (pdftex.def)             Requested size: 197.76117pt x 142.26378pt.
-<Images/exp_6/2_threshold.png, id=52, 399.4925pt x 283.0575pt>
+<Images/exp_6/2_threshold.png, id=58, 399.4925pt x 283.0575pt>
 File: Images/exp_6/2_threshold.png Graphic file (type png)
 <use Images/exp_6/2_threshold.png>
 Package pdftex.def Info: Images/exp_6/2_threshold.png  used on input line 328.
 (pdftex.def)             Requested size: 200.78813pt x 142.26378pt.
-[6 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/2_total_steps.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_2/3_updates_per_step.png>]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_3/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_3/2_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_4/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_4/2_win_percent.png>] [8 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_5/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_5/2_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_6/1_change.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_6/2_threshold.png>]
+[7 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_3/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_3/2_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_4/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_4/2_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_5/1_win_percent.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_5/2_win_percent.png>] [8 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_6/1_change.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_6/2_threshold.png>]
 <Images/exp_II/1_winning.png, id=74, 393.47pt x 283.0575pt>
 File: Images/exp_II/1_winning.png Graphic file (type png)
 <use Images/exp_II/1_winning.png>
 Package pdftex.def Info: Images/exp_II/1_winning.png  used on input line 377.
 (pdftex.def)             Requested size: 237.3146pt x 170.71652pt.
- [9 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_II/1_winning.png>]
-<Images/exp_III/1_winning.png, id=79, 429.605pt x 283.0575pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+<Images/exp_III/1_winning.png, id=78, 429.605pt x 283.0575pt>
 File: Images/exp_III/1_winning.png Graphic file (type png)
 <use Images/exp_III/1_winning.png>
 Package pdftex.def Info: Images/exp_III/1_winning.png  used on input line 389.
 (pdftex.def)             Requested size: 259.10881pt x 170.71652pt.
- [10 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_III/1_winning.png>] [11]
+ [10 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_II/1_winning.png> <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_III/1_winning.png>] [11]
 <Images/proposal/architecture_1_3.png, id=87, 1188.44pt x 557.08125pt>
 File: Images/proposal/architecture_1_3.png Graphic file (type png)
 <use Images/proposal/architecture_1_3.png>
 Package pdftex.def Info: Images/proposal/architecture_1_3.png  used on input line 436.
 (pdftex.def)             Requested size: 546.30823pt x 256.0748pt.
 
-Overfull \hbox (18.73808pt too wide) in paragraph at lines 436--437
+Overfull \hbox (33.19078pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
@@ -1170,17 +1166,17 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  9996 strings out of 492616
- 147344 string characters out of 6132768
- 514043 words of memory out of 5000000
- 13568 multiletter control sequences out of 15000+600000
- 48923 words of font info for 189 fonts, out of 8000000 for 9000
+ 147324 string characters out of 6132768
+ 523047 words of memory out of 5000000
+ 13566 multiletter control sequences out of 15000+600000
+ 48548 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,48p,3059b,1814s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,48p,3059b,1624s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 850345 bytes).
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 849900 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28783 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 26735 words of extra memory for PDF output out of 29859 (max. 10000000)
 
