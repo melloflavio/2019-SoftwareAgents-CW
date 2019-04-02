@@ -391,7 +391,7 @@ def update_q_matrix(current_state, next_state, current_agent_id, earned_reward):
         \label{fig:expIII:winning}
     \end{figure}
 
-    The results of the hyperstate Q-Learning (figure \ref{}) clearly show that this technique is able to lead to the optimal policy convergence. It is important to note 2 important points regarding this implementation:
+    The results of the hyperstate Q-Learning (figure \ref{fig:expIII:winning}) clearly show that this technique is able to lead to the optimal policy convergence. It is important to note 2 important points regarding this implementation:
     \begin{enumerate}[1)]
         \item It was based on standard Q-Learning, so the algorithm converges even when updating the Q-Matrix after each step (i.e. there is no need for holistic techniques such as TD($\lambda$))
         \item While this technique is able to treat the environment as static in the two agents scenario, the size of the next hyperstate increases exponentially with the number of players in the field. Thus for a large number of players this technique would become computationally too expensive and a different approach would be needed.
@@ -433,7 +433,7 @@ def get_max_expected_return_hyperstate(next_state, current_agent_id):
 
     \begin{figure}[h]
         \centering
-        \includegraphics[height=9cm]{Images/proposal/architecture.png}
+        \includegraphics[height=9cm]{Images/proposal/architecture_1_3.png}
         \caption{Proposed architecture for implementing advanced error correction models for audiovisual inputs with CNNs}
         \label{fig:proposal}
     \end{figure}

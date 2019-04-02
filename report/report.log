@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  2 APR 2019 02:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.19)  2 APR 2019 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1152,36 +1152,32 @@ File: Images/exp_III/1_winning.png Graphic file (type png)
 <use Images/exp_III/1_winning.png>
 Package pdftex.def Info: Images/exp_III/1_winning.png  used on input line 389.
 (pdftex.def)             Requested size: 259.10881pt x 170.71652pt.
+ [10 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_III/1_winning.png>] [11]
+<Images/proposal/architecture_1_3.png, id=87, 1188.44pt x 557.08125pt>
+File: Images/proposal/architecture_1_3.png Graphic file (type png)
+<use Images/proposal/architecture_1_3.png>
+Package pdftex.def Info: Images/proposal/architecture_1_3.png  used on input line 436.
+(pdftex.def)             Requested size: 546.30823pt x 256.0748pt.
 
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 394.
-
-[10 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/exp_III/1_winning.png>] [11]
-<Images/proposal/architecture.png, id=87, 1172.38pt x 560.0925pt>
-File: Images/proposal/architecture.png Graphic file (type png)
-<use Images/proposal/architecture.png>
-Package pdftex.def Info: Images/proposal/architecture.png  used on input line 436.
-(pdftex.def)             Requested size: 536.02765pt x 256.0748pt.
-
-Overfull \hbox (8.4575pt too wide) in paragraph at lines 436--437
+Overfull \hbox (18.73808pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
-[12 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/proposal/architecture.png>] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
+[12 <c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/Images/proposal/architecture_1_3.png>] (c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9997 strings out of 492616
- 147326 string characters out of 6132768
+ 9996 strings out of 492616
+ 147344 string characters out of 6132768
  514043 words of memory out of 5000000
- 13569 multiletter control sequences out of 15000+600000
+ 13568 multiletter control sequences out of 15000+600000
  48923 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,48p,3059b,1814s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txbtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 843214 bytes).
+Output written on c:/Users/flavi/Documents/Study/City-UniLondon/Term_2/SoftwareAgents/CW/report/report.pdf (12 pages, 850345 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
